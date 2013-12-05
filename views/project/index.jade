@@ -1,0 +1,23 @@
+extends ../layout
+
+block title
+	title='ПРОЕКТЫ | ' + project.ru.title.toUpperCase()
+
+block content_style
+	link(rel='stylesheet', type='text/css', href='/styles/project.css' + version)
+
+block content_scripts
+	script(type='text/javascript', src='/scripts/project.js' + version)
+
+block content
+	.content_menu_block
+		.content_menu_item= project.ru.title
+		a.up(href='#') сделать заказ
+	.project_body_block
+		img.project_preview_block
+		.project_description_block
+			.s_title= project.ru.s_title
+			.description= project.ru.description
+	.project_images_block
+		each image in project.images
+			img.image(src=image)

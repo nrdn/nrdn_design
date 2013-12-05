@@ -1,0 +1,41 @@
+.main_menu_block {
+	overflow: hidden;
+	border-bottom: 2px solid black;
+}
+
+.main_menu_item {
+	width: 200px;
+	font: 10pt/12pt 'MyraR';
+	margin-right: 15px;
+	cursor: default;
+	float: left;
+}
+
+.main_menu_drop {
+	width: 190px;
+	padding: 5px;
+	display: none;
+	position: absolute;
+	font: 11pt/14pt 'MyraR';
+}
+
+.main_menu_drop a {
+	color: white;
+	font-size: 10pt;
+}
+
+.works {
+	background-color: #9abb31;
+}
+
+.projects {
+	background-color: #ff3892;
+}
+
+.blog {
+	background-color: #ff7500;
+}
+
+.shop {
+	background-color: #00c5c1;
+}

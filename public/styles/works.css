@@ -1,0 +1,57 @@
+.content_menu_block {
+	overflow: hidden;
+	border-bottom: 2px solid #9abb31;
+	font: 10pt/12pt 'MyraR';
+}
+
+.content_menu_block a {
+	color: black;
+}
+
+.content_menu_item {
+	width: 200px;
+	float: left;
+	margin-right: 15px;
+}
+
+.content_images_block {
+	overflow: hidden;
+}
+
+.content_images_item {
+	width: 200px;
+	/*height: 150px;*/
+	margin-top: 15px;
+	margin-right: 15px;
+	float: left;
+	display: block;
+	cursor: pointer;
+	/*border: 1px solid black;*/
+}
+
+.up {
+	float: right;
+}
+
+.content_preview_block {
+	margin-top: 15px;
+	display: none;
+	overflow: hidden;
+}
+
+.preview_image {
+	width: 630px;
+	height: 500px;
+	display: block;
+	cursor: pointer;
+	float: left;
+}
+
+.preview_description {
+	width: 200px;
+	height: 300px;
+	margin-left: 15px;
+	float: left;
+	background-color: #5184b0;
+	/*border: 1px solid black;*/
+}

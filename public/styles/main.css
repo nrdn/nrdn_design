@@ -1,0 +1,88 @@
+@font-face {
+	font-family: MyraR;
+	src: url('/fonts/myra_regular.ttf');
+}
+
+@font-face {
+	font-family: MyraL;
+	src: url('/fonts/myra_light.ttf');
+}
+
+body {
+	font: 11pt/12pt 'Minion Pro';
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	display: block;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.maket {
+	width: 1280px;
+	min-height: 800px;
+	border: 1px solid black;
+	margin: 0 auto;
+}
+
+.main_block {
+	width: 1060px;
+	/*border: 1px solid black;*/
+}
+
+.main_block {
+	padding: 30px;
+	background-image: url(/images/design/gridinator.png);
+	margin: 0 auto;
+}
+
+.logo_block {
+	width: 200px;
+	/*height: 150px;*/
+	/*border: 1px solid black;*/
+	float: left;
+}
+
+.menu_block {
+	margin-left: 15px;
+	padding-left: 15px;
+	padding-top: 10px;
+	width: 150px;
+	height: 112px;
+	float: left;
+	border-left: 1px solid black;
+	font: 10pt/20pt 'MyraR';
+}
+
+.menu_block a {
+	color: black;
+}
+
+.social_block {
+	/*width: 150px;*/
+	/*height: 150px;*/
+	float: right;
+	/*border: 1px solid black;*/
+}
+
+.social_block a {
+	display: black;
+	float: left;
+	margin-left: 15px;
+}
+
+.social_block img {
+	width: 30px;
+}
+
+.content_block {
+	margin-top: 250px;
+	clear: both;
+	/*border: 1px solid black;*/
+}

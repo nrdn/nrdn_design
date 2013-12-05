@@ -1,0 +1,24 @@
+extends ../layout
+
+block title
+	title БЛОГ
+
+block content_style
+	link(rel='stylesheet', type='text/css', href='/styles/blog.css' + version)
+
+block content_scripts
+	script(type='text/javascript', src='/scripts/blog.js' + version)
+
+block content
+	.content_menu_block
+		a.content_menu_item(href='/blog/design') дизайн
+		a.content_menu_item(href='/blog/art') исскуство и фотография
+		a.content_menu_item(href='/blog/architecture') архитектура
+		a.up(href='#') подписаться
+	.content_images_block
+		each post in posts
+			a(href='/post/' + post._id)
+				img.content_images_item(src=post.images[0], id=post._id)
+	.content_preview_block
+		img.preview_image
+		.preview_description
