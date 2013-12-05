@@ -48,22 +48,6 @@ var workSchema = new Schema({
   date: {type: Date, default: Date.now}
 });
 
-var projectSchema = new Schema({
-    ru: {
-      title: String,
-      s_title: String,
-      description: String
-    },
-    en: {
-      title: String,
-      s_title: String,
-      description: String
-    },
-    tag: String,
-    date: {type: Date, default: Date.now},
-    images: [String],
-});
-
 var postSchema = new Schema({
     ru: {
       title: String,
@@ -87,7 +71,6 @@ var postSchema = new Schema({
 
 var User = mongoose.model('User', userSchema);
 var Work = mongoose.model('Work', workSchema);
-var Project = mongoose.model('Project', projectSchema);
 var Post = mongoose.model('Post', postSchema);
 
 
@@ -110,9 +93,7 @@ function checkAuth (req, res, next) {
 
 
 app.get('/', function(req, res) {
-  Project.find().exec(function(err, projects) {
-    res.render('index', {projects: projects});
-  });
+  res.render('index');
 });
 
 app.get('/works/:tag', function(req, res) {
@@ -128,14 +109,6 @@ app.post('/works', function(req, res) {
 
   Work.findById(id, function(err, work) {
     res.send(work.ru.description)
-  });
-});
-
-app.get('/project/:id', function(req, res) {
-  var id = req.params.id;
-
-  Project.findById(id ,function(err, project) {
-    res.render('project', {project: project});
   });
 });
 
@@ -211,47 +184,6 @@ app.post('/auth/add/work', function (req, res) {
         fs.unlink(files.photo.path);
         res.redirect('back');
       })
-    });
-  });
-});
-
-app.get('/auth/add/project', checkAuth, function (req, res) {
-  res.render('auth/add/project.jade');
-});
-
-app.post('/auth/add/project', function (req, res) {
-  var post = req.body;
-  var files = req.files;
-  var project = new Project();
-
-  project.tag = post.tag;
-  project.ru.title = post.ru.title;
-  project.ru.s_title = post.ru.s_title;
-  project.ru.description = post.ru.description;
-
-  if (post.en) {
-    project.en.title = post.en.title;
-    project.en.s_title = post.en.s_title;
-    project.en.description = post.en.description;
-  }
-
-  for (var i in files.photo) {
-    files.photo[i].name = i;
-  }
-
-  async.forEach(files.photo, function(photo, callback) {
-    fs.readFile(photo.path, function (err, data) {
-      fs.mkdir(__dirname + '/public/images/projects/' + project._id, function() {
-        var newPath = __dirname + '/public/images/projects/' + project._id + '/' + photo.name + '.jpg';
-        fs.writeFile(newPath, data, function (err) {
-          project.images.push('/images/projects/' + project._id + '/' + photo.name + '.jpg');
-          callback();
-        });
-      })
-    });
-  }, function() {
-    project.save(function() {
-      res.redirect('back');
     });
   });
 });

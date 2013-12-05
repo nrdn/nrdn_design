@@ -1,7 +1,7 @@
 extends ../layout
 
 block title
-	title СУПЕР САЙТ ДЛЯ ШЕЛЕГ
+	title Хрюша
 
 block content_style
 	link(rel='stylesheet', type='text/css', href='/styles/index.css' + version)
@@ -10,30 +10,4 @@ block content_scripts
 	script(type='text/javascript', src='/scripts/main.js' + version)
 
 block content
-	.main_menu_block
-		.main_menu_item работы
-			.main_menu_drop.works
-				a(href='/works/design').main_menu_drop_item графический дизайн
-				br
-				a(href='/works/graphic').main_menu_drop_item графика
-				br
-				a(href='/works/art').main_menu_drop_item живопись
-		.main_menu_item проекты
-			.main_menu_drop.projects
-				each project in projects
-					a(href='/project/' + project._id).main_menu_drop_item= project.ru.title.toUpperCase()
-					br
-		.main_menu_item блог
-			.main_menu_drop.blog
-				a(href='/blog/design').main_menu_drop_item дизайн
-				br
-				a(href='/blog/art').main_menu_drop_item искусство и фотография
-				br
-				a(href='/blog/architecture').main_menu_drop_item архитектура
-		.main_menu_item интернет магазин
-			.main_menu_drop.shop
-				a(href='/shop/design').main_menu_drop_item дизайн
-				br
-				a(href='/shop/art').main_menu_drop_item искусство и фотография
-				br
-				a(href='/shop/architecture').main_menu_drop_item архитектура
+	h1 Привет

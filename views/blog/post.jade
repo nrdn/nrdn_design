@@ -10,23 +10,4 @@ block content_scripts
 	script(type='text/javascript', src='/scripts/post.js' + version)
 
 block content
-	.content_menu_block
-		a.content_menu_item(href='/blog/design') дизайн
-		a.content_menu_item(href='/blog/art') исскуство и фотография
-		a.content_menu_item(href='/blog/architecture') архитектура
-		a.up(href='#') подписаться
-	.content_images_block
-		each image in post.images
-			img.image(src=image)
-	.content_body_block
-		img.image_preview
-		.content_description_block
-			.content_title= post.ru.title
-			.content_s_title= post.ru.s_title
-			.content_quote= post.ru.quote
-			.content_body= post.ru.body
-	.content_related_block
-		.r_title похожие
-		each r_post in r_posts
-				a.r_post(href='/post/' + r_post._id)
-					img.r_post_img(src=r_post.images[0])
+	h2 Пост
