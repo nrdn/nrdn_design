@@ -11,13 +11,9 @@ block content_right
 
 block content
 	a.back_link(href='/auth') < Назад
-	.title СПИСОК УЧАСТНИКОВ
+	.title СПИСОК РАБОТ
 	br
-	each member in members
+	each work in works
 		a(href='#')= 'удалить '
 		||&nbsp;
-		a(href='/auth/edit/members/' + member._id)= member.ru.name
-		b= ' ---> '
-		a(href='/member/' + member._id, target='_blank') результат
-		br
-		br
+		a(href='/auth/edit/works/' + work._id)= work.ru.title

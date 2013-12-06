@@ -8,13 +8,13 @@ block content_scripts
 
 block content
 	a.back_link(href='/auth') < Назад
-	.title СПИСОК НОВОСТЕЙ
+	.title СПИСОК ПОСТОВ
 	br
-	each n in news
+	each post in posts
 		a(href='#')= 'удалить '
 		||&nbsp;
-		a(href='/auth/edit/news/' + n._id)= n.ru.title
+		a(href='/auth/edit/posts/' + post._id)= post.ru.title
 		b= ' ---> '
-		a(href='/news/' + n._id, target='_blank') результат
+		a(href='/post/' + post._id, target='_blank') результат
 			br
 			br

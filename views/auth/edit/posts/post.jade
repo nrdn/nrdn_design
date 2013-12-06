@@ -1,0 +1,30 @@
+extends ../../../layout
+
+block content_style
+	link(rel='stylesheet', type='text/css', href='/styles/add.css')
+
+block content_scripts
+	script(type='text/javascript', src='/scripts/add_member.js')
+
+block content
+	a.back_link(href='/auth/edit/members') < Назад
+	.title РЕДАКТИРОВАТЬ ПОСТ
+	br
+	form(action="", method="post", enctype="multipart/form-data")
+		.form_title Название:
+		input.ru(type="text", name="ru[title]", value=post.ru.title)
+		input.en(type="text", name="en[title]", value=post.en.title, disabled)
+		.form_title Описание:
+		textarea.ru(name="ru[body]", rows="8",)= post.ru.body
+		textarea.en(name="en[body]", rows="8", disabled)= post.en.body
+		.form_title Категория:
+		select(name='tag')
+			option(value='one') раз
+			option(value='two') два
+			option(value='three') три
+		.form_title Изображение:
+		input(type="file", name="img")
+		br
+		br
+		input(type='button', class='toggle_eng', value='Перевод')
+		input(type="submit", value="Редактировать")

@@ -39,9 +39,11 @@ var userSchema = new Schema({
 var workSchema = new Schema({
   tag: String,
   ru: {
+    title: String,
     description: String
   },
   en: {
+    title: String,
     description: String
   },
   image: String,
@@ -51,14 +53,10 @@ var workSchema = new Schema({
 var postSchema = new Schema({
     ru: {
       title: String,
-      s_title: String,
-      quote: String,
       body: String
     },
     en: {
       title: String,
-      s_title: String,
-      quote: String,
       body: String
     },
     tag: String,
@@ -189,6 +187,11 @@ app.post('/auth/add/work', function (req, res) {
 });
 
 
+// ------------------------
+// *** Add Post Block ***
+// ------------------------
+
+
 app.get('/auth/add/post', checkAuth, function (req, res) {
   res.render('auth/add/post.jade');
 });
@@ -231,6 +234,39 @@ app.post('/auth/add/post', function (req, res) {
     b_post.save(function() {
       res.redirect('back');
     });
+  });
+});
+
+// ------------------------
+// *** Edit Posts Block ***
+// ------------------------
+
+
+app.get('/auth/edit/posts', checkAuth, function (req, res) {
+  Post.find().sort('-date').exec(function(err, posts) {
+    res.render('auth/edit/posts.jade', {posts:posts});
+  });
+});
+
+
+// ------------------------
+// *** Add Work Block ***
+// ------------------------
+
+
+app.get('/auth/add/work', checkAuth, function (req, res) {
+  res.render('auth/add/work.jade');
+});
+
+
+// ------------------------
+// *** Edit Works Block ***
+// ------------------------
+
+
+app.get('/auth/edit/works', checkAuth, function (req, res) {
+  Work.find().sort('-date').exec(function(err, works) {
+    res.render('auth/edit/works.jade', {works: works});
   });
 });
 

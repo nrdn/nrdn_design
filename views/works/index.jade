@@ -10,14 +10,4 @@ block content_scripts
 	script(type='text/javascript', src='/scripts/works.js' + version)
 
 block content
-	.content_menu_block
-		a.content_menu_item(href='/works/design') графический дизайн
-		a.content_menu_item(href='/works/graphic') графика
-		a.content_menu_item(href='/works/art') живопись
-		a.up(href='#') сделать заказ
-	.content_images_block
-		each work in works
-			img.content_images_item(src=work.image, id=work._id)
-	.content_preview_block
-		img.preview_image
-		.preview_description
+	h2 Работы
