@@ -128,15 +128,21 @@ app.post('/works', function(req, res) {
   });
 });
 
-app.get('/blog/:tag', function(req, res) {
-  var tag = req.params.tag;
-
-  Post.find({'tag': tag}).exec(function(err, posts) {
+app.get('/blog', function(req, res) {
+  Post.find().sort('-date').exec(function(err, posts) {
     res.render('blog', {posts: posts});
   });
 });
 
-app.get('/post/:id', function(req, res) {
+app.get('/blog/tags/:tag', function(req, res) {
+  var tag = req.params.tag;
+
+  Post.find({'tag': tag}).sort('-date').exec(function(err, posts) {
+    res.render('blog', {posts: posts});
+  });
+});
+
+app.get('/blog/posts/:id', function(req, res) {
   var id = req.params.id;
 
   Post.findById(id, function(err, post) {
