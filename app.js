@@ -205,14 +205,10 @@ app.post('/auth/add/post', function (req, res) {
   b_post.author = req.session.user_id;
 
   b_post.ru.title = post.ru.title;
-  b_post.ru.s_title = post.ru.s_title;
-  b_post.ru.quote = post.ru.quote;
   b_post.ru.body = post.ru.body;
 
   if (post.en) {
     b_post.en.title = post.en.title;
-    b_post.en.s_title = post.en.s_title;
-    b_post.en.quote = post.en.quote;
     b_post.en.body = post.en.body;
   }
 
@@ -237,6 +233,7 @@ app.post('/auth/add/post', function (req, res) {
   });
 });
 
+
 // ------------------------
 // *** Edit Posts Block ***
 // ------------------------
@@ -244,7 +241,54 @@ app.post('/auth/add/post', function (req, res) {
 
 app.get('/auth/edit/posts', checkAuth, function (req, res) {
   Post.find().sort('-date').exec(function(err, posts) {
-    res.render('auth/edit/posts.jade', {posts:posts});
+    res.render('auth/edit/posts', {posts:posts});
+  });
+});
+
+app.get('/auth/edit/posts/:id', checkAuth, function (req, res) {
+  var id = req.params.id;
+
+  Post.findById(id, function(err, post) {
+    res.render('auth/edit/posts/post.jade', {post:post});
+  });
+});
+
+app.post('/auth/edit/posts/:id', function (req, res) {
+  var id = req.params.id;
+  var post = req.body;
+  var files = req.files;
+
+  Post.findById(id, function(err, b_post) {
+
+    b_post.tag = post.tag;
+
+    b_post.ru.title = post.ru.title;
+    b_post.ru.body = post.ru.body;
+
+    if (post.en) {
+      b_post.en.title = post.en.title;
+      b_post.en.body = post.en.body;
+    }
+
+    for (var i in files.photo) {
+      files.photo[i].name = i;
+    }
+
+    async.forEach(files.photo, function(photo, callback) {
+      fs.readFile(photo.path, function (err, data) {
+        fs.mkdir(__dirname + '/public/images/posts/' + b_post._id, function() {
+          var newPath = __dirname + '/public/images/posts/' + b_post._id + '/' + photo.name + '.jpg';
+          fs.writeFile(newPath, data, function (err) {
+            b_post.images.push('/images/posts/' + b_post._id + '/' + photo.name + '.jpg');
+            callback();
+          });
+        })
+      });
+    }, function() {
+      b_post.save(function() {
+        res.redirect('back');
+      });
+    });
   });
 });
 
