@@ -86,6 +86,24 @@ function checkAuth (req, res, next) {
 
 
 // ------------------------
+// *** Post Params Block ***
+// ------------------------
+
+
+app.post('/works', function(req, res) {
+  Work.find().sort('-date').exec(function(err, works) {
+    res.send(works);
+  });
+});
+
+app.post('/posts', function(req, res) {
+  Post.find().sort('-date').exec(function(err, posts) {
+    res.send(posts);
+  });
+});
+
+
+// ------------------------
 // *** Main Block ***
 // ------------------------
 
