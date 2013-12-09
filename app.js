@@ -46,7 +46,7 @@ var workSchema = new Schema({
     title: String,
     description: String
   },
-  image: String,
+  images: [String],
   date: {type: Date, default: Date.now}
 });
 
@@ -160,31 +160,31 @@ app.get('/auth', checkAuth, function (req, res) {
   res.render('auth');
 });
 
-app.get('/auth/add/work', checkAuth, function (req, res) {
-  res.render('auth/add/work.jade');
-});
+// app.get('/auth/add/work', checkAuth, function (req, res) {
+//   res.render('auth/add/work.jade');
+// });
 
-app.post('/auth/add/work', function (req, res) {
-  var post = req.body;
-  var files = req.files;
-  var work = new Work();
+// app.post('/auth/add/work', function (req, res) {
+//   var post = req.body;
+//   var files = req.files;
+//   var work = new Work();
 
-  work.tag = post.tag;
-  work.ru.description = post.ru.description;
-  if (post.en)
-    work.en.description = post.en.description;
+//   work.tag = post.tag;
+//   work.ru.description = post.ru.description;
+//   if (post.en)
+//     work.en.description = post.en.description;
 
-  fs.readFile(files.photo.path, function (err, data) {
-    var newPath = __dirname + '/public/images/works/' + work._id + '.jpg';
-    fs.writeFile(newPath, data, function (err) {
-      work.image = '/images/works/' + work._id + '.jpg';
-      work.save(function() {
-        fs.unlink(files.photo.path);
-        res.redirect('back');
-      })
-    });
-  });
-});
+//   fs.readFile(files.photo.path, function (err, data) {
+//     var newPath = __dirname + '/public/images/works/' + work._id + '.jpg';
+//     fs.writeFile(newPath, data, function (err) {
+//       work.image = '/images/works/' + work._id + '.jpg';
+//       work.save(function() {
+//         fs.unlink(files.photo.path);
+//         res.redirect('back');
+//       });
+//     });
+//   });
+// });
 
 
 // ------------------------
@@ -224,7 +224,7 @@ app.post('/auth/add/post', function (req, res) {
           b_post.images.push('/images/posts/' + b_post._id + '/' + photo.name + '.jpg');
           callback();
         });
-      })
+      });
     });
   }, function() {
     b_post.save(function() {
@@ -302,6 +302,42 @@ app.get('/auth/add/work', checkAuth, function (req, res) {
   res.render('auth/add/work.jade');
 });
 
+app.post('/auth/add/work', function (req, res) {
+  var post = req.body;
+  var files = req.files;
+  var work = new Work();
+
+  work.tag = post.tag;
+
+  work.ru.title = post.ru.title;
+  work.ru.description = post.ru.description;
+
+  if (post.en) {
+    work.en.title = post.en.title;
+    work.en.description = post.en.description;
+  }
+
+  for (var i in files.photo) {
+    files.photo[i].name = i;
+  }
+
+  async.forEach(files.photo, function(photo, callback) {
+    fs.readFile(photo.path, function (err, data) {
+      fs.mkdir(__dirname + '/public/images/works/' + work._id, function() {
+        var newPath = __dirname + '/public/images/works/' + work._id + '/' + photo.name + '.jpg';
+        fs.writeFile(newPath, data, function (err) {
+          work.images.push('/images/works/' + work._id + '/' + photo.name + '.jpg');
+          callback();
+        });
+      });
+    });
+  }, function() {
+    work.save(function() {
+      res.redirect('back');
+    });
+  });
+});
+
 
 // ------------------------
 // *** Edit Works Block ***
@@ -310,7 +346,13 @@ app.get('/auth/add/work', checkAuth, function (req, res) {
 
 app.get('/auth/edit/works', checkAuth, function (req, res) {
   Work.find().sort('-date').exec(function(err, works) {
-    res.render('auth/edit/works.jade', {works: works});
+    res.render('auth/edit/works', {works: works});
+  });
+});
+
+app.get('/auth/edit/works/:id', checkAuth, function (req, res) {
+  Work.findById(id, function(err, work) {
+    res.render('auth/edit/works/work.jade', {work: work});
   });
 });
 

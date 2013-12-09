@@ -10,7 +10,7 @@ block content
 	.form_block
 		a.back_link(href='/auth') < Назад
 		.title ДОБАВИТЬ РАБОТУ
-		form(action="/auth/add/post", method="post", enctype="multipart/form-data")
+		form(action="/auth/add/work", method="post", enctype="multipart/form-data")
 			.form_title Заголовок:
 			input.ru(type="text", name="ru[title]",)
 			input.en(type="text", name="en[title]", disabled)
@@ -18,7 +18,7 @@ block content
 			textarea.ru(name="ru[description]", rows="8",)
 			textarea.en(name="en[description]", rows="8", disabled)
 			.snake
-				input(type="file", name="photo")
+				input(type="file", name="photo[0]")
 			input.plus(type="button", value="-")
 			input.minus(type="button", value="+")
 			.form_title Категория:
