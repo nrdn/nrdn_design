@@ -11,11 +11,25 @@ body {
 }
 .scrollblock {
 	width: 100%;
-	outline: 1px solid black;
+	/*outline: 1px solid black;*/
 }
 
 #menu {
-	цш
+	width: 1300px;
+	background-color: white;
+	overflow: hidden;
+}
+
+.m_item {
+	width: 150px;
+	height: 60px;
+	margin-right: 100px;
+	background-color: yellow;
+	float: left;
+}
+
+.m_item:nth-child(odd) {
+	/*margin-top: 250px;*/
 }
 
 #one {
@@ -24,8 +38,10 @@ body {
 	background-color: green;
 }
 #works {
-	height: 800px;
+	padding-top: 50px;
+	padding-bottom: 50px;
 	background-color: blue;
+	overflow: hidden;
 }
 #three {
 	height: 1000px;
@@ -41,17 +57,17 @@ body {
 	overflow: hidden;
 }
 
-.odd {
+.w_block {
 	width: 1200px;
-	clear: both;
-	overflow: hidden;
+/*	clear: both;
+	overflow: hidden;*/
 }
 
-.odd .work {
+.w_block:nth-child(odd) .work {
 	background-color: red;
 }
 
-.even .work {
+.w_block:nth-child(even) .work {
 	background-color: black;
 }
 
