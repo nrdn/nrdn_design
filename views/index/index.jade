@@ -8,10 +8,14 @@ block content_style
 
 block content_scripts
 	script(type='text/javascript', src='/scripts/main.js' + version)
+	script(type='text/javascript', src='/scripts/jquery.scrollorama.js' + version)
 
 block content
-	.cont.one
-		a(href='/blog') Блог
-	.cont.two
-	.cont.three
-	.cont.four
+	#console
+	.scrollblock
+			#one 1111111111
+			#two
+				#inner1 coool
+				#inner2 zlooooo
+			#three 3333333333
+			#four 44444444444

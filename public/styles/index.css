@@ -1,28 +1,42 @@
+#console {
+	position: fixed;
+	z-index: 9999999;
+	background-color: white;
+}
 body {
 	margin: 0;
 	padding: 0;
 	background-image: url('/images/design/backgrounds/1.jpg');
 	background-attachment: fixed;
 }
-.cont {
+.scrollblock {
 	width: 100%;
 	outline: 1px solid black;
-	margin-top: 250px;
 }
-.one {
-	margin-top: 400px;
+#one {
+	margin-top: 350px;
 	height: 600px;
 	background-color: green;
 }
-.two {
+#two {
 	height: 800px;
 	background-color: blue;
 }
-.three {
+#three {
 	height: 1000px;
 	background-color: red;
 }
-.four {
+#four {
 	height: 200px;
 	background-color: yellow;
+}
+#inner1 {
+	width:250px;
+	height: 250px;
+	background-color: red;
+}
+#inner2 {
+	width:250px;
+	height: 250px;
+	background-color: black;
 }
