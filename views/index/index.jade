@@ -8,18 +8,18 @@ block content_style
 
 block content_scripts
 	script(type='text/javascript', src='/scripts/main.js' + version)
-	script(type='text/javascript', src='/scripts/jquery.scrollorama.js' + version)
+	script(type='text/javascript', src='/scripts/skrollr.min.js' + version)
 
 block content
 	#console
-	.scrollblock
-			#menu
+	#skrollr-body
+			#menu(data-10="position:fixed;" )
 				.m_item kkkkkkkkk
 				.m_item zzzzz
 				.m_item hhhhhh
 				.m_item fffffff
 				.m_item jjjjjjjjj
-			#one 1111111111
+			#one(data-100="margin-top:300px;" data-200="margin-top:20px;") 1111111111
 			#works
 				.w_block
 					.work one work
