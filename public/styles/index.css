@@ -18,6 +18,9 @@ body {
 	width: 1300px;
 	background-color: white;
 	overflow: hidden;
+	position:fixed;
+	left: 50%;
+	margin-left: -650px;
 }
 
 .m_item {
