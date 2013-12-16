@@ -15,12 +15,12 @@ body {
 }
 
 #menu {
-	width: 1300px;
+	width: 1150px;
 	background-color: white;
 	overflow: hidden;
 	position:fixed;
 	left: 50%;
-	margin-left: -650px;
+	margin-left: -575px;
 }
 
 .m_item {
@@ -31,8 +31,8 @@ body {
 	float: left;
 }
 
-.m_item:nth-child(odd) {
-	/*margin-top: 250px;*/
+.m_item:last-child {
+	margin-right: 0px;
 }
 
 #one {
