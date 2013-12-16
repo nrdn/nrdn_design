@@ -5,38 +5,39 @@ block title
 
 block content_style
 	link(rel='stylesheet', type='text/css', href='/styles/index.css' + version)
+	//- link(rel='stylesheet', type='text/css', href='/styles/animate.css' + version, data-skrollr-stylesheet)
 
 block content_scripts
 	script(type='text/javascript', src='/scripts/main.js' + version)
-	script(type='text/javascript', src='/scripts/jquery.scrollorama.js' + version)
+	script(type='text/javascript', src='/scripts/skrollr.min.js' + version)
+	script(type='text/javascript', src='/scripts/skrollr.stylesheets.min.js' + version)
 
 block content
 	#console
-	.scrollblock
-			#menu
-				.m_item kkkkkkkkk
-				.m_item zzzzz
-				.m_item hhhhhh
-				.m_item fffffff
-				.m_item jjjjjjjjj
-			#one 1111111111
-	.scrollblock
-			#works
-				.w_block
-					.work one work
-					.work two work
-					.work three work
-				.w_block
-					.work one work
-					.work two work
-					.work three work
-				.w_block
-					.work one work
-					.work two work
-					.work three work
-				.w_block
-					.work one work
-					.work two work
-					.work three work
-			#three 3333333333
-			#four 44444444444
+	#skrollr-body
+		#menu(data--150="margin-top:-380px;" data-150="margin-top: -780px;")
+			.m_item(data--150="margin-top:650px; height:60px;" data-150="margin-top:0px; height:30px;") kkkkkkkkk
+			.m_item(data--150="height:60px;" data-150="height:30px;") zzzzz
+			.m_item(data--150="margin-top:650px; height:60px;" data-150="margin-top:0px; height:30px;") hhhhhh
+			.m_item(data--150="height:60px;" data-150="height:30px;") fffffff
+			.m_item(data--150="margin-top:650px; height:60px;" data-150="margin-top:0px; height:30px;") jjjjjjjjj
+		#one(data-450="margin-top:800px;") 1111111111
+		#works(data-1600="margin-top: 50px;" data-50="margin-top: 850px;")
+			.w_block(data-1630="margin-left: 180px;" data-50="margin-left: 0px;")
+				.work one work
+				.work two work
+				.work three work
+			.w_block(data-1630="margin-left: 0px;" data-50="margin-left: 180px;")
+				.work one work
+				.work two work
+				.work three work
+			.w_block(data-1630="margin-left: 180px;" data-50="margin-left: 0px;")
+				.work one work
+				.work two work
+				.work three work
+			.w_block(data-1630="margin-left: 0px;" data-50="margin-left: 180px;")
+				.work one work
+				.work two work
+				.work three work
+		#three 3333333333
+		#four 44444444444
