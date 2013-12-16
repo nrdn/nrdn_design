@@ -1,3 +1,9 @@
 $(document).ready(function() {
-  skrollr.init();
+  var s = skrollr.init({
+  	forceHeight: true
+  });
+
+  s.on('render', function(data) {
+  	console.log(data)
+  });
 });
