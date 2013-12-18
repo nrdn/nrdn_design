@@ -3,7 +3,12 @@ $(document).ready(function() {
   	forceHeight: true
   });
 
-  s.on('render', function(data) {
-  	console.log(data)
-  });
+  // $('.work').on({
+  // 	mouseover: function() {
+  // 		$(this).children('.w_description').show();
+  // 	},
+  // 	mouseout: function() {
+  // 		$(this).children('.w_description').hide();
+  // 	}
+  // });
 });

@@ -21,6 +21,7 @@ body {
 	position:fixed;
 	left: 50%;
 	margin-left: -575px;
+	z-index: 500;
 }
 
 .m_item {
@@ -41,8 +42,8 @@ body {
 	background-color: green;
 }
 #works {
-	padding-top: 50px;
-	padding-bottom: 50px;
+/*	padding-top: 50px;
+	padding-bottom: 50px;*/
 	background-color: blue;
 	overflow: hidden;
 }
@@ -78,9 +79,30 @@ body {
 	width:170px;
 	height: 170px;
 	float: left;
+	position: relative;
 	margin-right: 170px;
+}
+.work:hover .w_description {
+	display: block;
 }
 
 .w_block .work:last-child {
 	margin-right: 0px;
+}
+
+.w_description {
+	width: 170px;
+	height: 170px;
+	top:0;
+	position: absolute;
+	display: none;
+	background-color: white;
+}
+
+.w_block:nth-child(odd) .work>.w_description {
+	right: 170px;
+}
+
+.w_block:nth-child(even) .work>.w_description {
+	left: 170px;
 }
