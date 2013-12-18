@@ -15,19 +15,19 @@ body {
 }
 
 #menu {
-	width: 1150px;
+	width: 80%;
 	background-color: white;
 	overflow: hidden;
 	position:fixed;
 	left: 50%;
-	margin-left: -575px;
+	margin-left: -40%;
 	z-index: 500;
 }
 
 .m_item {
-	width: 150px;
+	width: 13%;
 	height: 60px;
-	margin-right: 100px;
+	margin-right: 8%;
 	background-color: yellow;
 	float: left;
 }
@@ -62,9 +62,8 @@ body {
 }
 
 .w_block {
-	width: 1200px;
-/*	clear: both;
-	overflow: hidden;*/
+	width: 100%;
+	clear: both;
 }
 
 .w_block:nth-child(odd) .work {
@@ -76,33 +75,52 @@ body {
 }
 
 .work {
-	width:170px;
-	height: 170px;
+	width:10%;
+	height: 10%;
 	float: left;
 	position: relative;
-	margin-right: 170px;
+	margin-right: 10%;
 }
+
+.work:before {
+   content: '';
+   display: block;
+   padding: 100% 100% 0 0;
+}
+
+.inner {
+   position: absolute;
+   left: 0;
+   right: 0;
+   top: 0;
+   bottom: 0;
+   background: url('http://www.calorizator.ru/sites/default/files/product/apple.jpg') scroll no-repeat;
+   background-size: contain;
+}
+
+
 .work:hover .w_description {
 	display: block;
 }
 
 .w_block .work:last-child {
-	margin-right: 0px;
+	margin-right: 0%;
 }
 
 .w_description {
-	width: 170px;
-	height: 170px;
-	top:0;
+	width: 100%;
+	height: 100%;
+	/*left: 100%;*/
+	top: 0;
 	position: absolute;
 	display: none;
 	background-color: white;
 }
 
 .w_block:nth-child(odd) .work>.w_description {
-	right: 170px;
+	right: 100%;
 }
 
 .w_block:nth-child(even) .work>.w_description {
-	left: 170px;
+	left: 100%;
 }
