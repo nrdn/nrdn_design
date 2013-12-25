@@ -25,9 +25,9 @@ body {
 }
 
 .m_item {
-	width: 15.5%;
+	width: 12.5%;
 	height: 60px;
-	margin-right: 5.7%;
+	margin-right: 12.5%;
 	background-color: yellow;
 	float: left;
 }
