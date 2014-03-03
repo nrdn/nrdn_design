@@ -1,0 +1,19 @@
+@font-face {
+	font-family: Hel_neue_R;
+	src: url('/fonts/helveticaneuecyr-roman-webfont.ttf');
+}
+
+@font-face {
+	font-family: Hel_neue_L;
+	src: url('/fonts/helveticaneuecyr-light-webfont.ttf');
+}
+
+@font-face {
+	font-family: Hel_neue_UL;
+	src: url('/fonts/helveticaneuecyr-ultralight-webfont.ttf');
+}
+
+@font-face {
+	font-family: Hel_neue_T;
+	src: url('/fonts/helveticaneuecyr-thin-webfont.ttf');
+}

@@ -9,62 +9,30 @@ block content_style
 
 block content_scripts
 	script(type='text/javascript', src='/scripts/main.js' + version)
-	script(type='text/javascript', src='/scripts/skrollr.min.js' + version)
+	//- script(type='text/javascript', src='/scripts/skrollr.min.js' + version)
 	//- script(type='text/javascript', src='/scripts/skrollr.stylesheets.min.js' + version)
 
 block content
-	#console
-	#skrollr-body
-		#menu(data--150="margin-top:-380px;" data-150="margin-top: -780px;")
-			.m_item(data--150="margin-top:650px; height:60px;" data-150="margin-top:0px; height:30px;") kkkkkkkkk
-			.m_item(data--150="height:60px;" data-150="height:30px;") zzzzz
-			.m_item(data--150="margin-top:650px; height:60px;" data-150="margin-top:0px; height:30px;") hhhhhh
-			.m_item(data--150="height:60px;" data-150="height:30px;") fffffff
-		#one(data-450="margin-top:800px;") 1111111111
-		#works(data-1600="margin-top: 150px;" data-50="margin-top: 850px;")
-			.w_block(data-1600="margin-left: 10%;" data-50="margin-left: 0%;")
-				.work
-					.inner
-					.w_description cool1
-				.work
-					.inner
-					.w_description cool2
-				.work
-					.inner
-					.w_description cool3
-				.work
-					.inner
-					.w_description cool4
-				.work
-					.inner
-					.w_description cool5
-			.w_block(data-1600="margin-left: 0%;" data-50="margin-left: 10%;")
-				.work
-					.inner
-					.w_description cool1
-				.work
-					.inner
-					.w_description cool2
-				.work
-					.inner
-					.w_description cool3
-				.work
-					.inner
-					.w_description cool4
-				.work
-					.inner
-					.w_description cool5
-			.w_block(data-1600="margin-left: 10%;" data-50="margin-left: 0%;")
-				.work
-				.work
-				.work
-				.work
-				.work
-			.w_block(data-1600="margin-left: 0%;" data-50="margin-left: 10%;")
-				.work
-				.work
-				.work
-				.work
-				.work
-		#three(data-2200="margin-top: 150px;" data-50="margin-top: 1250px;") 3333333333
-		#four 44444444444
+	.content.main
+		.content_title NRDN design
+		.content_dscription
+	.content.works
+		.content_title Работы
+		.work_item
+		.work_item
+		.work_item
+		.work_item
+	.content.services
+		.content_title Услуги
+		.columns_block
+			.column_item
+				.column_logo
+				.column_title
+				.column_description
+			.column_item
+			.column_item
+			.column_item
+			.column_item
+	.content.contacts
+		.content_title Контакты
+		.content_dscription
