@@ -7,10 +7,13 @@ html
 			.main_block
 				.header_block
 					.menu_block
-						a(href='/') NRDN design
-						a(href='/works') Работы
-						a(href='/services') Услуги
-						a(href='/contacts') Контакты
+						a.logo(href='/')
+							.logo_img
+						.menu_items
+							a(href='/works') Работы
+							a(href='/services') Услуги
+							a(href='/contacts') Контакты
+							a(href='http://www.nrdn.ru/blog', target='_blank') Блог
 				.content_block
 					block content
 				.footer_block

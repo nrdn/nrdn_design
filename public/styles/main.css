@@ -18,11 +18,10 @@
 	src: url('/fonts/helveticaneuecyr-thin-webfont.ttf');
 }
 
-html, body, .maket, .content_block, .content {
+html, body, .maket, .content_block {
 	margin: 0;
 	padding: 0;
 	width: 100%;
-	height: 100%;
 }
 
 .menu_block {
@@ -37,6 +36,50 @@ html, body, .maket, .content_block, .content {
 	background-color: green;
 }
 
-.menu_block a {
-	margin-right: 20px;
+.logo {
+	float: left;
+	border: 0;
+	text-decoration: none;
+	font: 11pt/12pt 'Hel_neue_R';
+	color: black;
+}
+
+.logo_img {
+	width: 18px;
+	height: 18px;
+	background: url('/images/design/logo.png');
+	background-size: cover;
+}
+
+.logo_img:after {
+	content: 'NRDN design';
+	margin-left: 25px;
+	white-space: nowrap;
+	display: inline-block;
+	margin-top: 1px;
+}
+
+.logo_img:hover:after {
+	border-bottom: 1px dotted black;
+}
+
+.menu_items {
+	float: right;
+}
+
+.menu_items a {
+	margin-left: 20px;
+	text-decoration: none;
+	display: inline-block;
+	font: 11pt/12pt 'Hel_neue_R';
+	color: black;
+}
+
+.menu_block a:hover {
+	border-bottom: 1px dotted black;
+}
+
+.content_title {
+	font: 52pt/62pt 'Hel_neue_UL';
+	margin-bottom: 50px;
 }

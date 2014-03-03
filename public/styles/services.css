@@ -1,0 +1,26 @@
+.content_block {
+	width: 1120px;
+	margin-top: 100px;
+	position: absolute;
+	left: 50%;
+	margin-left: -560px;
+	/*outline: 1px solid black;*/
+}
+
+.column_item {
+	width: 200px;
+	float: left;
+	margin-right: 30px;
+	/*outline: 1px solid black;*/
+}
+
+.column_item:last-child {
+	margin-right: 0px;
+}
+
+.column_title {
+	margin-top: 15px;
+	/*width: 200px;*/
+	height: 80px;
+	font: 18pt/22pt 'Hel_neue_L';
+}
