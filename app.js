@@ -112,43 +112,9 @@ app.get('/', function(req, res) {
   res.render('index');
 });
 
-app.get('/works/:tag', function(req, res) {
-  var tag = req.params.tag;
-
-  Work.find({'tag': tag}).exec(function(err, works) {
+app.get('/works', function(req, res) {
+  Work.find().sort('-date').exec(function(err, works) {
     res.render('works', {works: works});
-  });
-});
-
-app.post('/works', function(req, res) {
-  var id = req.body.id;
-
-  Work.findById(id, function(err, work) {
-    res.send(work.ru.description)
-  });
-});
-
-app.get('/blog', function(req, res) {
-  Post.find().sort('-date').exec(function(err, posts) {
-    res.render('blog', {posts: posts});
-  });
-});
-
-app.get('/blog/tags/:tag', function(req, res) {
-  var tag = req.params.tag;
-
-  Post.find({'tag': tag}).sort('-date').exec(function(err, posts) {
-    res.render('blog', {posts: posts});
-  });
-});
-
-app.get('/blog/posts/:id', function(req, res) {
-  var id = req.params.id;
-
-  Post.findById(id, function(err, post) {
-    Post.find({'tag':post.tag}).sort('-date').limit(6).exec(function(err, r_posts) {
-      res.render('blog/post.jade', {post: post, r_posts: r_posts});
-    });
   });
 });
 
@@ -162,12 +128,8 @@ app.get('/about', function(req, res) {
   res.render('static/about.jade');
 });
 
-app.get('/srvices', function(req, res) {
-  res.render('static/srvices.jade');
-});
-
-app.get('/concept', function(req, res) {
-  res.render('static/concept.jade');
+app.get('/services', function(req, res) {
+  res.render('static/services.jade');
 });
 
 app.get('/contacts', function(req, res) {
