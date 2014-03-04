@@ -10,5 +10,6 @@ block content_scripts
 	script(type='text/javascript', src='/scripts/work.js' + version)
 
 block content
-	.content_title= work.ru.title
-	.content_description= work.ru.description
+	.content_description_block
+		.content_title= work.ru.title
+		.content_description= work.ru.description
