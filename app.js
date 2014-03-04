@@ -146,138 +146,6 @@ app.get('/auth', checkAuth, function (req, res) {
   res.render('auth');
 });
 
-// app.get('/auth/add/work', checkAuth, function (req, res) {
-//   res.render('auth/add/work.jade');
-// });
-
-// app.post('/auth/add/work', function (req, res) {
-//   var post = req.body;
-//   var files = req.files;
-//   var work = new Work();
-
-//   work.tag = post.tag;
-//   work.ru.description = post.ru.description;
-//   if (post.en)
-//     work.en.description = post.en.description;
-
-//   fs.readFile(files.photo.path, function (err, data) {
-//     var newPath = __dirname + '/public/images/works/' + work._id + '.jpg';
-//     fs.writeFile(newPath, data, function (err) {
-//       work.image = '/images/works/' + work._id + '.jpg';
-//       work.save(function() {
-//         fs.unlink(files.photo.path);
-//         res.redirect('back');
-//       });
-//     });
-//   });
-// });
-
-
-// ------------------------
-// *** Add Post Block ***
-// ------------------------
-
-
-app.get('/auth/add/post', checkAuth, function (req, res) {
-  res.render('auth/add/post.jade');
-});
-
-app.post('/auth/add/post', function (req, res) {
-  var post = req.body;
-  var files = req.files;
-  var b_post = new Post();
-
-  b_post.tag = post.tag;
-  b_post.author = req.session.user_id;
-
-  b_post.ru.title = post.ru.title;
-  b_post.ru.body = post.ru.body;
-
-  if (post.en) {
-    b_post.en.title = post.en.title;
-    b_post.en.body = post.en.body;
-  }
-
-  for (var i in files.photo) {
-    files.photo[i].name = i;
-  }
-
-  async.forEach(files.photo, function(photo, callback) {
-    fs.readFile(photo.path, function (err, data) {
-      fs.mkdir(__dirname + '/public/images/posts/' + b_post._id, function() {
-        var newPath = __dirname + '/public/images/posts/' + b_post._id + '/' + photo.name + '.jpg';
-        fs.writeFile(newPath, data, function (err) {
-          b_post.images.push('/images/posts/' + b_post._id + '/' + photo.name + '.jpg');
-          callback();
-        });
-      });
-    });
-  }, function() {
-    b_post.save(function() {
-      res.redirect('back');
-    });
-  });
-});
-
-
-// ------------------------
-// *** Edit Posts Block ***
-// ------------------------
-
-
-app.get('/auth/edit/posts', checkAuth, function (req, res) {
-  Post.find().sort('-date').exec(function(err, posts) {
-    res.render('auth/edit/posts', {posts:posts});
-  });
-});
-
-app.get('/auth/edit/posts/:id', checkAuth, function (req, res) {
-  var id = req.params.id;
-
-  Post.findById(id, function(err, post) {
-    res.render('auth/edit/posts/post.jade', {post:post});
-  });
-});
-
-app.post('/auth/edit/posts/:id', function (req, res) {
-  var id = req.params.id;
-  var post = req.body;
-  var files = req.files;
-
-  Post.findById(id, function(err, b_post) {
-
-    b_post.tag = post.tag;
-
-    b_post.ru.title = post.ru.title;
-    b_post.ru.body = post.ru.body;
-
-    if (post.en) {
-      b_post.en.title = post.en.title;
-      b_post.en.body = post.en.body;
-    }
-
-    for (var i in files.photo) {
-      files.photo[i].name = i;
-    }
-
-    async.forEach(files.photo, function(photo, callback) {
-      fs.readFile(photo.path, function (err, data) {
-        fs.mkdir(__dirname + '/public/images/posts/' + b_post._id, function() {
-          var newPath = __dirname + '/public/images/posts/' + b_post._id + '/' + photo.name + '.jpg';
-          fs.writeFile(newPath, data, function (err) {
-            b_post.images.push('/images/posts/' + b_post._id + '/' + photo.name + '.jpg');
-            callback();
-          });
-        })
-      });
-    }, function() {
-      b_post.save(function() {
-        res.redirect('back');
-      });
-    });
-  });
-});
-
 
 // ------------------------
 // *** Add Work Block ***
@@ -293,7 +161,7 @@ app.post('/auth/add/work', function (req, res) {
   var files = req.files;
   var work = new Work();
 
-  work.tag = post.tag;
+  // work.tag = post.tag;
 
   work.ru.title = post.ru.title;
   work.ru.description = post.ru.description;
@@ -337,6 +205,8 @@ app.get('/auth/edit/works', checkAuth, function (req, res) {
 });
 
 app.get('/auth/edit/works/:id', checkAuth, function (req, res) {
+  var id = req.params.id;
+
   Work.findById(id, function(err, work) {
     res.render('auth/edit/works/work.jade', {work: work});
   });

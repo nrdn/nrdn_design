@@ -4,7 +4,7 @@ block content_style
 	link(rel='stylesheet', type='text/css', href='/styles/add.css')
 
 block content_scripts
-	script(type='text/javascript', src='/scripts/add_member.js')
+	script(type='text/javascript', src='/scripts/add.js')
 
 block content_right
 
@@ -20,13 +20,17 @@ block content
 		.form_title Описание:
 		textarea.ru(name="ru[description]", rows="8",)= work.ru.description
 		textarea.en(name="en[description]", rows="8", disabled)= work.en.description
-		.form_title Категория:
-		select(name='tag')
-			option(value='one') раз
-			option(value='two') два
-			option(value='three') три
-		.form_title Изображение:
-		input(type="file", name="img")
+		//- .form_title Категория:
+		//- select(name='tag')
+		//- 	option(value='one') раз
+		//- 	option(value='two') два
+		//- 	option(value='three') три
+		//- .form_title Изображение:
+		.form_title Картинки:
+		.snake
+			input(type="file", name="photo[0]")
+		input.plus(type="button", value="-")
+		input.minus(type="button", value="+")
 		br
 		br
 		input(type='button', class='toggle_eng', value='Перевод')

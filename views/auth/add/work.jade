@@ -17,15 +17,17 @@ block content
 			.form_title Описание:
 			textarea.ru(name="ru[description]", rows="8",)
 			textarea.en(name="en[description]", rows="8", disabled)
+			.form_title Картинки:
 			.snake
 				input(type="file", name="photo[0]")
 			input.plus(type="button", value="-")
 			input.minus(type="button", value="+")
-			.form_title Категория:
-			select(name='tag')
+			//- .form_title Категория:
+			//- select(name='tag')
 				option(value='one') раз
 				option(value='two') два
 				option(value='three') три
+			br
 			br
 			input(type='button', class='toggle_eng', value='Перевод')
 			input(type="submit", value="Добавить")
