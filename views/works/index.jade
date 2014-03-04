@@ -12,4 +12,8 @@ block content_scripts
 block content
 	.content_title Работы
 	.work_items
-		.work_item
+		each work in works
+			.work_item
+				a(href='/works/' + work._id)
+					.work_logo
+						!= work.logo

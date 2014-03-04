@@ -1,0 +1,14 @@
+extends ../layout
+
+block title
+	title= work.ru.title
+
+block content_style
+	link(rel='stylesheet', type='text/css', href='/styles/work.css' + version)
+
+block content_scripts
+	script(type='text/javascript', src='/scripts/work.js' + version)
+
+block content
+	.content_title= work.ru.title
+	.content_description= work.ru.description

@@ -47,29 +47,13 @@ var workSchema = new Schema({
     description: String
   },
   images: [String],
+  logo: String,
   date: {type: Date, default: Date.now}
 });
-
-var postSchema = new Schema({
-    ru: {
-      title: String,
-      body: String
-    },
-    en: {
-      title: String,
-      body: String
-    },
-    tag: String,
-    author: { type: Schema.Types.ObjectId, ref: 'User' },
-    date: {type: Date, default: Date.now},
-    images: [String],
-});
-
 
 
 var User = mongoose.model('User', userSchema);
 var Work = mongoose.model('Work', workSchema);
-var Post = mongoose.model('Post', postSchema);
 
 
 // ------------------------
@@ -118,6 +102,15 @@ app.get('/works', function(req, res) {
   });
 });
 
+app.get('/works/:id', function(req, res) {
+  var id = req.params.id;
+
+  Work.findById(id, function(err, work) {
+    res.render('works/work.jade', {work: work})
+  });
+});
+
+
 
 // ------------------------
 // *** Static Block ***
@@ -165,6 +158,7 @@ app.post('/auth/add/work', function (req, res) {
 
   work.ru.title = post.ru.title;
   work.ru.description = post.ru.description;
+  work.logo = post.logo;
 
   if (post.en) {
     work.en.title = post.en.title;
