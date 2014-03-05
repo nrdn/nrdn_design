@@ -1,8 +1,16 @@
 .content_block {
+	width: 1120px;
+	margin-top: 100px;
 	position: absolute;
-	height: 100%;
+	left: 50%;
+	margin-left: -560px;
 }
 
-.content_block {
-	background-image: url('/images/design/backgrounds/main.jpg')
+
+.content_description_block {
+	color: white;
+}
+
+.content_description {
+	width: 285px;
 }

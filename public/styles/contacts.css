@@ -5,3 +5,18 @@
 	left: 50%;
 	margin-left: -560px;
 }
+
+#map-canvas {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+.content_description_block {
+	color: white;
+}
+
+.content_phone {
+	margin-bottom: 15px;
+	font: 18pt/22pt 'Hel_neue_T';
+}

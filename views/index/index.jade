@@ -3,14 +3,17 @@ extends ../layout
 block title
 	title Хрюша
 
+block append works_bg
+	.background_works
+		.background_item(style='background-image: url(/images/design/backgrounds/main.jpg)')
+
 block content_style
 	link(rel='stylesheet', type='text/css', href='/styles/index.css' + version)
-	//- link(rel='stylesheet', type='text/css', href='/styles/animate.css' + version, data-skrollr-stylesheet)
 
 block content_scripts
 	script(type='text/javascript', src='/scripts/main.js' + version)
-	//- script(type='text/javascript', src='/scripts/skrollr.min.js' + version)
-	//- script(type='text/javascript', src='/scripts/skrollr.stylesheets.min.js' + version)
 
 block content
-	.content_title NRDN design
+	.content_description_block
+		.content_title NRDN DESIGN
+		.content_description Московское мультидисциплинарное креативное агентство

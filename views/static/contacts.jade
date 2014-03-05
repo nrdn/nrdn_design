@@ -8,6 +8,14 @@ block content_style
 
 block content_scripts
 	script(type='text/javascript', src='/scripts/contacts.js' + version)
+	script(type='text/javascript', src='/scripts/g_maps.js' + version)
+	script(type='text/javascript', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyANZaPhQkXPPO4uT5vggfplLs2Bh3cpWeY&sensor=false')
+
+block append works_bg
+	#map-canvas
 
 block content
-	.content_title Контакты
+	.content_description_block
+		.content_title Контакты
+		.content_phone +7 (495) 629-03-40
+		.content_description 107031 Россия, Москва, ул. Большая Дмитровка, д. 24. Ближайшие станции метро – Тверская, Чеховская, Пушкинская, Театральная.

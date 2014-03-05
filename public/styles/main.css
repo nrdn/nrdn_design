@@ -18,10 +18,13 @@
 	src: url('/fonts/helveticaneuecyr-thin-webfont.ttf');
 }
 
-html, body, .maket, .content_block {
+html, body, .maket {
+	height: 100%;
+}
+
+body {
+	overflow: hidden;
 	margin: 0;
-	padding: 0;
-	width: 100%;
 }
 
 .menu_block {
@@ -33,7 +36,7 @@ html, body, .maket, .content_block {
 	overflow: hidden;
 	position: fixed;
 	z-index: 999;
-	background-color: green;
+	background-color: white;
 }
 
 .logo {
@@ -79,7 +82,39 @@ html, body, .maket, .content_block {
 	border-bottom: 1px dotted black;
 }
 
+.content_description_block {
+	background-color: black;
+	width: 400px;
+	padding: 5px;
+}
+
 .content_title {
 	font: 52pt/62pt 'Hel_neue_UL';
-	margin-bottom: 50px;
+	margin-bottom: 15px;
+}
+
+.content_title:after {
+	content: ' –';
+}
+
+.content_description {
+	font: 18pt/22pt 'Hel_neue_T';
+}
+
+.background_works {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+.background_item {
+	width: 100%;
+	height: 100%;
+	/*opacity: 0;*/
+	position: absolute;
+	background: no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
