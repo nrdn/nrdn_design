@@ -3,6 +3,11 @@ extends ../layout
 block title
 	title= work.ru.title
 
+block append works_bg
+	.background_works
+		each image in work.images
+			.background_item(style='background-image: url(' + image + ')')
+
 block content_style
 	link(rel='stylesheet', type='text/css', href='/styles/work.css' + version)
 
