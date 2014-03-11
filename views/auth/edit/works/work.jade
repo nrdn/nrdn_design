@@ -20,17 +20,19 @@ block content
 		.form_title Описание:
 		textarea.ru(name="ru[description]", rows="8",)= work.ru.description
 		textarea.en(name="en[description]", rows="8", disabled)= work.en.description
+		.form_title Лого:
+		input(type="text", name="logo", value=work.logo)
 		//- .form_title Категория:
 		//- select(name='tag')
 		//- 	option(value='one') раз
 		//- 	option(value='two') два
 		//- 	option(value='three') три
 		//- .form_title Изображение:
-		.form_title Картинки:
-		.snake
-			input(type="file", name="photo[0]")
-		input.plus(type="button", value="-")
-		input.minus(type="button", value="+")
+		//- .form_title Картинки:
+		//- .snake
+		//- 	input(type="file", name="photo[0]")
+		//- input.plus(type="button", value="-")
+		//- input.minus(type="button", value="+")
 		br
 		br
 		input(type='button', class='toggle_eng', value='Перевод')

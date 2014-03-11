@@ -6,8 +6,8 @@ block content_style
 block content
 	a.back_link(href='/logout') Выход
 	br
-	b= session
-	br
+	//- b= session
+	//- br
 	.title ЗВЕЗДОЧЕТ
 	br
 	b Работы:
@@ -16,9 +16,3 @@ block content
 	||
 	a(href='/auth/edit/works')= ' редактировать'
 	br
-	br
-	b Блог:
-	br
-	a(href='/auth/add/post')= ' добавить '
-	||
-	a(href='/auth/edit/posts')= ' редактировать'

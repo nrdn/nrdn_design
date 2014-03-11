@@ -206,6 +206,29 @@ app.get('/auth/edit/works/:id', checkAuth, function (req, res) {
   });
 });
 
+app.post('/auth/edit/works/:id', function (req, res) {
+
+  var id = req.params.id;
+  var post = req.body;
+  var files = req.files;
+
+
+  Work.findById(id, function(err, work) {
+
+    work.ru.title = post.ru.title;
+    work.ru.description = post.ru.description;
+    work.logo = post.logo;
+
+    if (post.en) {
+      work.en.title = post.en.title;
+      work.en.description = post.en.description;
+    }
+
+    work.save(function() {
+      res.redirect('back');
+    });
+  });
+});
 
 app.get('/login', function (req, res) {
   res.render('login');
