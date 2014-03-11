@@ -9,3 +9,25 @@
 .content_description_block {
 	color: white;
 }
+
+.footer_block {
+	width: 100%;
+	position: absolute;
+	z-index: 999;
+	top: 95%;
+	text-align: center;
+	-webkit-user-select: none;
+}
+
+.dot {
+	margin-right: 15px;
+	color: white;
+	display: inline;
+	cursor: default;
+}
+
+* {
+	-webkit-transition-property: opacity;
+	-webkit-transition-duration: 0.5s;
+	-webkit-transition-timing-function: ease-in-out;
+}
