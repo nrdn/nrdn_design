@@ -78,6 +78,10 @@ body {
 	color: black;
 }
 
+.menu_block a {
+	border-bottom: 1px solid transparent;
+}
+
 .menu_block a:hover {
 	border-bottom: 1px dotted black;
 }
