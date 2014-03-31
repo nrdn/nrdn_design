@@ -25,6 +25,11 @@
 	display: block;
 }
 
+.menu_items a:before {
+	margin-right: 5px;
+	content: '●';
+}
+
 .menu_items a:hover {
 	text-decoration: underline;
 }
