@@ -1,124 +1,38 @@
 @font-face {
-	font-family: Hel_neue_R;
-	src: url('/fonts/helveticaneuecyr-roman-webfont.ttf');
-}
-
-@font-face {
 	font-family: Hel_neue_L;
-	src: url('/fonts/helveticaneuecyr-light-webfont.ttf');
+	src: url('/fonts/HelveticaNeueCyr-Light.otf');
 }
 
-@font-face {
-	font-family: Hel_neue_UL;
-	src: url('/fonts/helveticaneuecyr-ultralight-webfont.ttf');
-}
-
-@font-face {
-	font-family: Hel_neue_T;
-	src: url('/fonts/helveticaneuecyr-thin-webfont.ttf');
-}
-
-html, body, .maket {
-	height: 100%;
-}
-
-body {
+.main_block {
+	/*outline: 1px solid red;*/
 	overflow: hidden;
-	margin: 0;
+	width: 1280px;
+	position: relative;
+	margin: 200px auto;
 }
 
 .menu_block {
-	margin-top: 30px;
-	width: 1120px;
-	padding: 5px;
-	left: 50%;
-	margin-left: -560px;
-	overflow: hidden;
+	width: 100px;
+	/*min-height: 300px;*/
+	/*outline: 1px solid red;*/
 	position: fixed;
-	z-index: 999;
-	background-color: white;
-}
-
-.logo {
-	float: left;
-	border: 0;
-	text-decoration: none;
-	font: 11pt/12pt 'Hel_neue_R';
-	color: black;
-}
-
-.logo_img {
-	width: 18px;
-	height: 18px;
-	background: url('/images/design/logo.png');
-	background-size: cover;
-}
-
-.logo_img:after {
-	content: 'NRDN design';
-	margin-left: 25px;
-	white-space: nowrap;
-	display: inline-block;
-	margin-top: 1px;
-}
-
-.logo_img:hover:after {
-	border-bottom: 1px dotted black;
-}
-
-.menu_items {
-	float: right;
 }
 
 .menu_items a {
-	margin-left: 20px;
+	font: 14pt/16pt 'Hel_neue_L';
 	text-decoration: none;
-	display: inline-block;
-	font: 11pt/12pt 'Hel_neue_R';
 	color: black;
+	display: block;
 }
 
-.menu_block a {
-	border-bottom: 1px solid transparent;
+.menu_items a:hover {
+	text-decoration: underline;
 }
 
-.menu_block a:hover {
-	border-bottom: 1px dotted black;
-}
-
-.content_description_block {
-	background-color: black;
-	width: 400px;
-	padding: 5px;
-}
-
-.content_title {
-	font: 52pt/62pt 'Hel_neue_UL';
-	margin-bottom: 15px;
-}
-
-.content_title:after {
-	content: ' –';
-}
-
-.content_description {
-	font: 18pt/22pt 'Hel_neue_T';
-}
-
-.background_works {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-}
-
-.background_item {
-	width: 100%;
-	height: 100%;
-	/*opacity: 0;*/
-	position: absolute;
-	background: no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+.logo {
+	font: 27pt/27pt 'Hel_neue_L';
+	display: block;
+	color: black;
+	text-decoration: none;
+	margin-bottom: 10px;
 }
