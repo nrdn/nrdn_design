@@ -15,13 +15,13 @@ block content_scripts
 	script(type='text/javascript', src='/scripts/main.js' + version)
 
 block content
-	.categorys_block
+	.categorys_block(data-0-top="margin-top: 85px;" data--600-top="margin-top: -180px;")
 		.category.site: img.inner(src='/images/design/services/site.svg', data-0="width: 100px;", data-450="width: 50px;")
 		.category.support: img.inner(src='/images/design/services/support.svg', data-0="width: 100px;", data-450="width: 50px;")
 		.category.navigate: img.inner(src='/images/design/services/navigate.svg', data-0="width: 100px;", data-450="width: 50px;")
 		.category.design: img.inner(src='/images/design/services/design.svg', data-0="width: 100px;", data-450="width: 50px;")
 		.category.exhibition: img.inner(src='/images/design/services/exhibition.svg', data-0="width: 100px;", data-450="width: 50px;")
-	.works_block
+	.works_block(data-0="margin-top: 600px;" data-1000="margin-top: 600px;")
 		.work.site
 			each work in works
 				.work_item: != work.logo
