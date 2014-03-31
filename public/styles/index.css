@@ -1,11 +1,13 @@
 .content_block {
+	width: 1000px;
+	margin-left: 200px;
 	overflow: hidden;
-	background-color: red;
+	/*background-color: red;*/
 }
 
 .categorys {
 	position: fixed;
-	margin-left: 200px;
+	/*margin-left: 200px;*/
 }
 
 .category {
@@ -30,10 +32,10 @@
 .works {
 	clear: both;
 	margin-top: 600px;
-	margin-left: 225px;
+	margin-left: 25px;
 	overflow: hidden;
 	position: relative;
-	outline: 1px solid green;
+	/*outline: 1px solid green;*/
 }
 
 .work {
