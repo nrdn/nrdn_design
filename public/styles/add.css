@@ -1,9 +1,6 @@
 .content_block {
-	width: 1120px;
-	margin-top: 100px;
-	position: absolute;
-	left: 50%;
-	margin-left: -560px;
+	overflow: hidden;
+	margin-left: 200px;
 }
 
 input {
