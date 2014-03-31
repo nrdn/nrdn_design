@@ -14,15 +14,25 @@ block content_scripts
 	script(type='text/javascript', src='/scripts/main.js' + version)
 
 block content
-	.categorys
+	.categorys_block
 		.category.site: img.inner(src='/images/design/services/site.svg')
 		.category.support: img.inner(src='/images/design/services/support.svg')
 		.category.navigate: img.inner(src='/images/design/services/navigate.svg')
 		.category.design: img.inner(src='/images/design/services/design.svg')
 		.category.exhibition: img.inner(src='/images/design/services/exhibition.svg')
-	.works
+	.works_block
 		.work.site
+			each work in works
+				.work_item: != work.logo
 		.work.support
+			each work in works
+				.work_item: != work.logo
 		.work.navigate
+			each work in works
+				.work_item: != work.logo
 		.work.design
+			each work in works
+				.work_item: != work.logo
 		.work.exhibition
+			each work in works
+				.work_item: != work.logo

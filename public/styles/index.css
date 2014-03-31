@@ -5,7 +5,7 @@
 	/*background-color: red;*/
 }
 
-.categorys {
+.categorys_block {
 	position: fixed;
 	/*margin-left: 200px;*/
 }
@@ -29,7 +29,7 @@
 	margin-right: 0;
 }
 
-.works {
+.works_block {
 	clear: both;
 	margin-top: 600px;
 	margin-left: 25px;
@@ -40,11 +40,17 @@
 
 .work {
 	width: 100px;
-	height: 600px;
+	/*height: 600px;*/
 	margin-left: 50px;
 	margin-right: 50px;
-	background-color: black;
+	/*background-color: green;*/
 	float: left;
+}
+
+.work_item {
+	width: 100px;
+	height: 100px;
+	margin-bottom: 25px;
 }
 
 .work:last-child {

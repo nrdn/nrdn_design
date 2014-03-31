@@ -91,14 +91,9 @@ app.post('/posts', function(req, res) {
 // *** Main Block ***
 // ------------------------
 
-
 app.get('/', function(req, res) {
-  res.render('index');
-});
-
-app.get('/works', function(req, res) {
   Work.find().sort('-date').exec(function(err, works) {
-    res.render('works', {works: works});
+    res.render('index', {works: works});
   });
 });
 
