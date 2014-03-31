@@ -22,7 +22,7 @@
 .inner {
 	width: 100px;
 	height: 100px;
-	/*background-color: #eba1a4;*/
+	background-color: #eba1a4;
 }
 
 .category:last-child {

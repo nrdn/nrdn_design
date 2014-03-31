@@ -11,15 +11,16 @@ block content_style
 	link(rel='stylesheet', type='text/css', href='/styles/index.css' + version)
 
 block content_scripts
+	script(type='text/javascript', src='/scripts/skrollr.js' + version)
 	script(type='text/javascript', src='/scripts/main.js' + version)
 
 block content
 	.categorys_block
-		.category.site: img.inner(src='/images/design/services/site.svg')
-		.category.support: img.inner(src='/images/design/services/support.svg')
-		.category.navigate: img.inner(src='/images/design/services/navigate.svg')
-		.category.design: img.inner(src='/images/design/services/design.svg')
-		.category.exhibition: img.inner(src='/images/design/services/exhibition.svg')
+		.category.site: img.inner(src='/images/design/services/site.svg', data-0="width: 100px;", data-450="width: 50px;")
+		.category.support: img.inner(src='/images/design/services/support.svg', data-0="width: 100px;", data-450="width: 50px;")
+		.category.navigate: img.inner(src='/images/design/services/navigate.svg', data-0="width: 100px;", data-450="width: 50px;")
+		.category.design: img.inner(src='/images/design/services/design.svg', data-0="width: 100px;", data-450="width: 50px;")
+		.category.exhibition: img.inner(src='/images/design/services/exhibition.svg', data-0="width: 100px;", data-450="width: 50px;")
 	.works_block
 		.work.site
 			each work in works
