@@ -40,9 +40,12 @@ block content
 			each work in works
 				.work_item: != work.logo
 	.contacts_block
-		p +7 (495) 629-03-40 / mail@nrdn.ru
-		p 107031 Россия, Москва, ул. Большая Дмитровка, д. 24,
-		p м. Тверская, Чеховская, Пушкинская, Театральная.
+		!= '+7 (495) 629-03-40 / '
+		a(href='mailto:mail@nrdn.ru') mail@nrdn.ru
+		br
+		|107031 Россия, Москва, ул. Большая Дмитровка, д. 24,
+		br
+		|м. Тверская, Чеховская, Пушкинская, Театральная.
 block footer
 	.maps_block
 		#map-canvas
