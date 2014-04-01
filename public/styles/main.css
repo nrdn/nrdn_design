@@ -3,6 +3,11 @@
 	src: url('/fonts/HelveticaNeueCyr-Light.otf');
 }
 
+body {
+	margin: 0;
+	padding: 0;
+}
+
 .main_block {
 	/*outline: 1px solid red;*/
 	overflow: hidden;
