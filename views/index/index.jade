@@ -18,11 +18,21 @@ block content_scripts
 
 block content
 	.categorys_block#one(data-0="margin-top: 200px;", data-500="margin-top: 0px", data-800="margin-top: 0px", data-1000="margin-top: -150px",)
-		.category.site: img.inner(src='/images/design/services/site.svg', data-0="width: 100px;", data-450="width: 50px;")
-		.category.support: img.inner(src='/images/design/services/support.svg', data-0="width: 100px;", data-450="width: 50px;")
-		.category.navigate: img.inner(src='/images/design/services/navigate.svg', data-0="width: 100px;", data-450="width: 50px;")
-		.category.design: img.inner(src='/images/design/services/design.svg', data-0="width: 100px;", data-450="width: 50px;")
-		.category.exhibition: img.inner(src='/images/design/services/exhibition.svg', data-0="width: 100px;", data-450="width: 50px;")
+		.category.site
+			img.inner(src='/images/design/services/site.svg', data-0="width: 100px;", data-450="width: 50px;")
+			.category_title(data-0="opacity: 1", data-250="opacity: 0") Создание сайтов
+		.category.support
+			img.inner(src='/images/design/services/support.svg', data-0="width: 100px;", data-450="width: 50px;")
+			.category_title(data-0="opacity: 1", data-250="opacity: 0") Поддержка сайтов
+		.category.navigate
+			img.inner(src='/images/design/services/navigate.svg', data-0="width: 100px;", data-450="width: 50px;")
+			.category_title(data-0="opacity: 1", data-250="opacity: 0") Разработка навигации
+		.category.design
+			img.inner(src='/images/design/services/design.svg', data-0="width: 100px;", data-450="width: 50px;")
+			.category_title(data-0="opacity: 1", data-250="opacity: 0") Графический дизайн
+		.category.exhibition
+			img.inner(src='/images/design/services/exhibition.svg', data-0="width: 100px;", data-450="width: 50px;")
+			.category_title(data-0="opacity: 1", data-250="opacity: 0") Проектирование выставок
 	.works_block#two(data-0="margin-top: 700px;", data-1600="margin-top: 100px;")
 		.work.site
 			each work in works

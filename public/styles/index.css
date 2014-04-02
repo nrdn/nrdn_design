@@ -26,6 +26,13 @@
 	/*background-color: #eba1a4;*/
 }
 
+.category_title {
+	position: absolute;
+	margin-top: 10px;
+	margin-left: -20px;
+	font: 12pt/14pt 'Hel_neue_L';
+}
+
 .category:last-child {
 	margin-right: 0;
 }
