@@ -14,48 +14,35 @@ block content_scripts
 	script(type='text/javascript', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAdOUtWoBDjtiaQ9vyioSeOT-c3-Qqnwq8&sensor=false')
 	script(type='text/javascript', src='/scripts/g_maps.js' + version)
 	script(type='text/javascript', src='/scripts/skrollr.js' + version)
+	script(type='text/javascript', src='/scripts/skrollr.menu.js' + version)
 	script(type='text/javascript', src='/scripts/main.js' + version)
 
 block content
-	.categorys_block#one(data-0p="margin-top: 10%;", data-50p="margin-top: 0%", data-80p="margin-top: 0%", data-160p="margin-top: -15%",)
+	#categorys.categorys(data-smooth-scrolling='off', data-anchor-target='.works', data-0='margin-top: 0px;', data-800='margin-top: -200px;', data-_works='margin-top: -200px;', data-top-bottom='margin-top: -350px;')
 		.category.site
-			img.inner(src='/images/design/services/site.svg', data-0="width: 100px;", data-450="width: 50px;")
-			.category_title(data-0="opacity: 1", data-250="opacity: 0") Создание сайтов
+			img.inner(src='/images/design/services/site.svg', data-anchor-target='.works', data-0='width: 100px; height: 100px;', data-800='width: 50px; height: 50px;')
+			.cat_desc(data-anchor-target='.works', data-0='opacity: 1;', data-600='opacity: 0;') Создание сайтов
 		.category.support
-			img.inner(src='/images/design/services/support.svg', data-0="width: 100px;", data-450="width: 50px;")
-			.category_title(data-0="opacity: 1", data-250="opacity: 0") Поддержка сайтов
+			img.inner(src='/images/design/services/support.svg', data-anchor-target='.works', data-0='width: 100px; height: 100px;', data-800='width: 50px; height: 50px;')
+			.cat_desc(data-anchor-target='.works', data-0='opacity: 1;', data-600='opacity: 0;') Поддержка сайтов
 		.category.navigate
-			img.inner(src='/images/design/services/navigate.svg', data-0="width: 100px;", data-450="width: 50px;")
-			.category_title(data-0="opacity: 1", data-250="opacity: 0") Разработка навигации
+			img.inner(src='/images/design/services/navigate.svg', data-anchor-target='.works', data-0='width: 100px; height: 100px;', data-800='width: 50px; height: 50px;')
+			.cat_desc(data-anchor-target='.works', data-0='opacity: 1;', data-600='opacity: 0;') Разработка навигации
 		.category.design
-			img.inner(src='/images/design/services/design.svg', data-0="width: 100px;", data-450="width: 50px;")
-			.category_title(data-0="opacity: 1", data-250="opacity: 0") Графический дизайн
+			img.inner(src='/images/design/services/design.svg', data-anchor-target='.works', data-0='width: 100px; height: 100px;', data-800='width: 50px; height: 50px;')
+			.cat_desc(data-anchor-target='.works', data-0='opacity: 1;', data-600='opacity: 0;') Графический дизайн
 		.category.exhibition
-			img.inner(src='/images/design/services/exhibition.svg', data-0="width: 100px;", data-450="width: 50px;")
-			.category_title(data-0="opacity: 1", data-250="opacity: 0") Проектирование выставок
-	.works_block#two(data-0="margin-top: 70%;", data-160p="margin-top: 15%;")
+			img.inner(src='/images/design/services/exhibition.svg', data-anchor-target='.works', data-0='width: 100px; height: 100px;', data-800='width: 50px; height: 50px;')
+			.cat_desc(data-anchor-target='.works', data-0='opacity: 1;', data-600='opacity: 0;') Проектирование выставок
+	#works.works(data-menu-offset='-100')
 		.work.site
-			each work in works
-				.work_item: != work.logo
 		.work.support
-			each work in works.splice(3)
-				.work_item: != work.logo
 		.work.navigate
-			each work in works.splice(1)
-				.work_item: != work.logo
 		.work.design
-			each work in works
-				.work_item: != work.logo
 		.work.exhibition
-			each work in works
-				.work_item: != work.logo
-	.contacts_block
-		!= '+7 (495) 629-03-40 / '
-		a(href='mailto:mail@nrdn.ru') mail@nrdn.ru
-		br
-		|107031 Россия, Москва, ул. Большая Дмитровка, д. 24,
-		br
-		|м. Тверская, Чеховская, Пушкинская, Театральная.
+	#contacts.contacts
+		.contacts_inner contacts
+
 block footer
-	.maps_block
+	.maps
 		#map-canvas

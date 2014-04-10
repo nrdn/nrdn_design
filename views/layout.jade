@@ -4,15 +4,13 @@ html
 		include header
 	body
 		block works_bg
-		.maket
+		#scrollr-body.maket
 			.main_block
 				.menu_block
-					a.logo(href='/') NRDN design
-					.menu_items
-						a(href='/works') работы
-						a(href='/contacts') контакты
-						//- a(href='/blog') блог
+					a.logo(href='#scrollr-body') NRDN design
+					a.m_item(href='#works') работы
+					a.m_item(href='#contacts') контакты
 				.content_block
 					block content
-			.footer_block
-				block footer
+		.footer_block
+			block footer

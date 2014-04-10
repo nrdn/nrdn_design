@@ -1,48 +1,53 @@
 @font-face {
-	font-family: Hel_neue_L;
+	font-family: HelveticaL;
 	src: url('/fonts/HelveticaNeueCyr-Light.otf');
 }
 
 body {
 	margin: 0;
-	padding: 0;
+}
+
+.maket {
+	/*outline: 1px solid red;*/
+	background-color: white;
+	overflow: hidden;
+	width: 100%;
+	position: relative;
+	margin: 0 auto;
+	margin-bottom: 26%;
+	z-index: 1;
 }
 
 .main_block {
-	/*outline: 1px solid red;*/
-	overflow: hidden;
 	width: 1280px;
-	position: relative;
-	margin: 100px auto;
+	margin: 0 auto;
 }
 
 .menu_block {
 	width: 100px;
+	top: 100px;
 	/*min-height: 300px;*/
 	/*outline: 1px solid red;*/
 	position: fixed;
+	z-index: 2;
 }
 
-.menu_items a {
-	font: 14pt/16pt 'Hel_neue_L';
-	text-decoration: none;
-	color: black;
+.m_item {
 	display: block;
+	color: black;
+	text-decoration: none;
+	font: 14pt/16pt 'HelveticaL';
 }
 
-.menu_items a:before {
-	margin-right: 5px;
+.m_item:before {
 	content: '●';
-}
-
-.menu_items a:hover {
-	text-decoration: underline;
+	margin-right: 10px;
 }
 
 .logo {
-	font: 27pt/27pt 'Hel_neue_L';
+	font: 27pt/27pt 'HelveticaL';
+	text-decoration: none;
 	display: block;
 	color: black;
-	text-decoration: none;
 	margin-bottom: 10px;
 }
