@@ -26,7 +26,7 @@
 #works {
 	clear: both;
 	margin-top: 80%;
-	/*margin-bottom: 50%;*/
+	/*margin-bottom: 20%;*/
 	margin-left: 225px;
 	overflow: hidden;
 	position: relative;
@@ -35,11 +35,17 @@
 
 .work {
 	width: 100px;
-	height: 800px;
+	/*height: 800px;*/
 	margin-left: 50px;
 	margin-right: 50px;
-	background-color: black;
+	/*background-color: #967451;*/
 	float: left;
+}
+
+.work_item {
+	width: 100px;
+	height: 100px;
+	margin-bottom: 20px;
 }
 
 .work:last-child {
@@ -47,19 +53,12 @@
 }
 
 #contacts {
-	height: 50%;
-	margin-top: 30%;
-	margin-bottom: 20%;
+	margin-top: 10%;
+	margin-bottom: 10%;
 	padding-left: 200px;
+	font: 12pt/14pt 'HelveticaL';
+	overflow: hidden;
 	background-color: #6da1bf;
-}
-
-.contacts_inner {
-	width: 1080px;
-	position: absolute;
-	margin-top: 100px;
-	margin-left: 200px;
-	background-color: red;
 }
 
 .footer_block {
@@ -73,5 +72,13 @@
 
 #maps {
 	width: 100%;
-	height: 50%;
+	height: 100%;
+}
+
+.partner {
+	width: 50px;
+	height: 50px;
+	float: left;
+	background-color: #bf7851;
+	margin-right: 10px;
 }
