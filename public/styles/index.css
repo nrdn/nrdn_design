@@ -1,4 +1,4 @@
-.categorys {
+#categorys {
 	top: 300px;
 	position: fixed;
 	margin-left: 200px;
@@ -7,7 +7,7 @@
 .category {
 	width: 100px;
 	height: 100px;
-	/*background-color: #eba1a4;*/
+	background-color: #eba1a4;
 	float: left;
 	margin-right: 100px;
 	/*position: absolute;*/
@@ -19,17 +19,11 @@
 	font: 12pt/14pt 'HelveticaL';
 }
 
-.inner {
-	width: 100px;
-	height: 100px;
-	/*background-color: #eba1a4;*/
-}
-
 .category:last-child {
 	margin-right: 0;
 }
 
-.works {
+#works {
 	clear: both;
 	margin-top: 80%;
 	/*margin-bottom: 50%;*/
@@ -52,7 +46,7 @@
 	margin-right: 0;
 }
 
-.contacts {
+#contacts {
 	height: 50%;
 	margin-top: 30%;
 	/*margin-bottom: 50%;*/

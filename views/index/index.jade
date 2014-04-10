@@ -18,29 +18,29 @@ block content_scripts
 	script(type='text/javascript', src='/scripts/main.js' + version)
 
 block content
-	#categorys.categorys(data-smooth-scrolling='off', data-anchor-target='.works', data-0='margin-top: 0px;', data-800='margin-top: -200px;', data-_works='margin-top: -200px;', data-top-bottom='margin-top: -350px;')
-		.category.site
-			img.inner(src='/images/design/services/site.svg', data-anchor-target='.works', data-0='width: 100px; height: 100px;', data-800='width: 50px; height: 50px;')
-			.cat_desc(data-anchor-target='.works', data-0='opacity: 1;', data-600='opacity: 0;') Создание сайтов
-		.category.support
-			img.inner(src='/images/design/services/support.svg', data-anchor-target='.works', data-0='width: 100px; height: 100px;', data-800='width: 50px; height: 50px;')
-			.cat_desc(data-anchor-target='.works', data-0='opacity: 1;', data-600='opacity: 0;') Поддержка сайтов
-		.category.navigate
-			img.inner(src='/images/design/services/navigate.svg', data-anchor-target='.works', data-0='width: 100px; height: 100px;', data-800='width: 50px; height: 50px;')
-			.cat_desc(data-anchor-target='.works', data-0='opacity: 1;', data-600='opacity: 0;') Разработка навигации
-		.category.design
-			img.inner(src='/images/design/services/design.svg', data-anchor-target='.works', data-0='width: 100px; height: 100px;', data-800='width: 50px; height: 50px;')
-			.cat_desc(data-anchor-target='.works', data-0='opacity: 1;', data-600='opacity: 0;') Графический дизайн
-		.category.exhibition
-			img.inner(src='/images/design/services/exhibition.svg', data-anchor-target='.works', data-0='width: 100px; height: 100px;', data-800='width: 50px; height: 50px;')
-			.cat_desc(data-anchor-target='.works', data-0='opacity: 1;', data-600='opacity: 0;') Проектирование выставок
-	#works.works(data-menu-offset='-100')
+	#categorys(data-smooth-scrolling='off', data-anchor-target='#works', data-0='margin-top: 0px;', data-800='margin-top: -200px;', data-_works='margin-top: -200px;', data-top-bottom='margin-top: -350px;')
+		.category
+			img(src='/images/design/services/site.svg', data-anchor-target='#works', data-0='width: 100px; height: 100px;', data-800='width: 50px; height: 50px;')
+			.cat_desc(data-anchor-target='#works', data-0='opacity: 1;', data-600='opacity: 0;') Создание сайтов
+		.category
+			img(src='/images/design/services/support.svg', data-anchor-target='#works', data-0='width: 100px; height: 100px;', data-800='width: 50px; height: 50px;')
+			.cat_desc(data-anchor-target='#works', data-0='opacity: 1;', data-600='opacity: 0;') Поддержка сайтов
+		.category
+			img(src='/images/design/services/navigate.svg', data-anchor-target='#works', data-0='width: 100px; height: 100px;', data-800='width: 50px; height: 50px;')
+			.cat_desc(data-anchor-target='#works', data-0='opacity: 1;', data-600='opacity: 0;') Разработка навигации
+		.category
+			img(src='/images/design/services/design.svg', data-anchor-target='#works', data-0='width: 100px; height: 100px;', data-800='width: 50px; height: 50px;')
+			.cat_desc(data-anchor-target='#works', data-0='opacity: 1;', data-600='opacity: 0;') Графический дизайн
+		.category
+			img(src='/images/design/services/exhibition.svg', data-anchor-target='#works', data-0='width: 100px; height: 100px;', data-800='width: 50px; height: 50px;')
+			.cat_desc(data-anchor-target='#works', data-0='opacity: 1;', data-600='opacity: 0;') Проектирование выставок
+	#works(data-menu-offset='-100')
 		.work.site
 		.work.support
 		.work.navigate
 		.work.design
 		.work.exhibition
-	#contacts.contacts
+	#contacts
 		.contacts_inner contacts
 
 block footer
