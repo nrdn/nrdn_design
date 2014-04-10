@@ -47,6 +47,7 @@ var workSchema = new Schema({
     description: String
   },
   images: [String],
+  category: String,
   logo: String,
   date: {type: Date, default: Date.now}
 });
