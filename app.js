@@ -150,11 +150,10 @@ app.post('/auth/add/work', function (req, res) {
   var files = req.files;
   var work = new Work();
 
-  // work.tag = post.tag;
-
   work.ru.title = post.ru.title;
   work.ru.description = post.ru.description;
   work.logo = post.logo;
+  work.category = post.category;
 
   if (post.en) {
     work.en.title = post.en.title;
@@ -214,6 +213,7 @@ app.post('/auth/edit/works/:id', function (req, res) {
     work.ru.title = post.ru.title;
     work.ru.description = post.ru.description;
     work.logo = post.logo;
+    work.category = post.category;
 
     if (post.en) {
       work.en.title = post.en.title;

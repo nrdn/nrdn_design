@@ -24,11 +24,13 @@ block content
 				input(type="file", name="photo[0]")
 			input.plus(type="button", value="-")
 			input.minus(type="button", value="+")
-			//- .form_title Категория:
-			//- select(name='tag')
-				option(value='one') раз
-				option(value='two') два
-				option(value='three') три
+			.form_title Категория:
+			select(name='category')
+				option(value='site') Создание сайтов
+				option(value='support') Поддержка сайтов
+				option(value='navigate') Разработка навигации
+				option(value='design') Графический дизайн
+				option(value='exhibition') Проектирование выставок
 			br
 			br
 			input(type='button', class='toggle_eng', value='Перевод')

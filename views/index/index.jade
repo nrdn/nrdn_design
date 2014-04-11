@@ -37,24 +37,29 @@ block content
 	#works(data-menu-offset='-100')
 		.work.site
 			each work in works
-				.work_item
-					!= work.logo
+				if (work.category == 'site')
+					.work_item
+						!= work.logo
 		.work.support
 			each work in works
-				.work_item
-					!= work.logo
+				if (work.category == 'support')
+					.work_item
+						!= work.logo
 		.work.navigate
 			each work in works
-				.work_item
-					!= work.logo
+				if (work.category == 'navigate')
+					.work_item
+						!= work.logo
 		.work.design
 			each work in works
-				.work_item
-					!= work.logo
+				if (work.category == 'design')
+					.work_item
+						!= work.logo
 		.work.exhibition
 			each work in works
-				.work_item
-					!= work.logo
+				if (work.category == 'exhibition')
+					.work_item
+						!= work.logo
 	#contacts
 		!= '+7 (495) 629-03-40 / '
 		a(href='mailto:mail@nrdn.ru') mail@nrdn.ru
