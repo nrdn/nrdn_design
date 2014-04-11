@@ -4,13 +4,14 @@ $(document).ready(function() {
 	$('.work').click(function(event) {
 		$('#work_area, .m_images').show();
 		$('#works, #categorys, #contacts, #maps').hide();
-		$('.maket').css('margin-bottom', '10%');
+		// $('.maket').css('margin-bottom', '10%');
+		$('.main_block').css('margin-bottom', '0px').css('margin', '0 auto');
 	});
 
 	$('#work_area').click(function(event) {
 		$('#work_area, .m_images').hide();
 		$('#works, #categorys, #contacts, #maps').show();
-		$('.maket').removeAttr('style');
+		$('.main_block').removeAttr('style');
 	});
 
 	var s = skrollr.init({
