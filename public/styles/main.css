@@ -50,3 +50,14 @@ body {
 	color: black;
 	margin-bottom: 10px;
 }
+
+.m_images {
+	margin-top: 20px;
+}
+
+.m_img_item {
+	width: 100px;
+	height: 80px;
+	margin-bottom: 20px;
+	background-color: #1b9669;
+}

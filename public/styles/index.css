@@ -60,7 +60,16 @@
 	padding-left: 200px;
 	font: 12pt/14pt 'HelveticaL';
 	overflow: hidden;
-	/*background-color: #6da1bf;*/
+	background-color: #6da1bf;
+}
+
+#work_area {
+	background-color: #818cd6;
+	margin-top: 100px;
+	width: 1000px;
+	height: 420px;
+	margin-bottom: 200px;
+	margin-left: 200px;
 }
 
 .footer_block {
