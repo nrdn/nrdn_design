@@ -19,7 +19,12 @@ body {
 
 .main_block {
 	width: 1280px;
-	margin: 0 auto;
+	margin: 50% auto;
+	background-color: red;
+}
+
+.content_block {
+	position: relative;
 }
 
 .menu_block {
@@ -52,7 +57,7 @@ body {
 }
 
 .m_images {
-	margin-top: 20px;
+	margin-top: 15px;
 }
 
 .m_img_item {

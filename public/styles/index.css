@@ -32,15 +32,15 @@
 	margin-left: 225px;
 	overflow: hidden;
 	position: relative;
-	/*background-color: #bbbf6f;*/
+	background-color: #bbbf6f;
 }
 
 .work {
 	width: 100px;
-	min-height: 200px;
+	min-height: 800px;
 	margin-left: 50px;
 	margin-right: 50px;
-	/*background-color: #967451;*/
+	background-color: #967451;
 	float: left;
 }
 
@@ -55,11 +55,12 @@
 }
 
 #contacts {
-	margin-top: 10%;
-	margin-bottom: 10%;
+	height: 46%;
+	margin-top: 30%;
 	padding-left: 200px;
-	font: 12pt/14pt 'HelveticaL';
-	overflow: hidden;
+	/*margin-bottom: 50%;*/
+	width: 1080px;
+	position: absolute;
 	background-color: #6da1bf;
 }
 
@@ -67,7 +68,7 @@
 	background-color: #818cd6;
 	margin-top: 100px;
 	width: 1000px;
-	height: 420px;
+	height: 520px;
 	margin-bottom: 200px;
 	margin-left: 200px;
 }
