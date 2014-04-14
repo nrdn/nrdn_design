@@ -4,7 +4,7 @@ $(document).ready(function() {
 		var arr = ['one', 'two', 'three', 'four', 'five', 'six', 'seven'];
 
 		$.post( '/work', { id: $(this).attr('id') } ).done(function(work) {
-			$(document).scrollTop(0)
+			$(document).scrollTop(0);
 			$('.main_block').css('margin-bottom', '0px').css('margin', '0 auto');
 			$('#works, #categorys, #contacts, #maps').hide();
 

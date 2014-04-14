@@ -1,3 +1,11 @@
+.maket {
+	margin: 0;
+}
+
+.main_block {
+	margin: 100px auto;
+}
+
 .content_block {
 	margin-left: 200px;
 }
