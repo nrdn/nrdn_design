@@ -60,9 +60,13 @@ body {
 	margin-top: 15px;
 }
 
-.m_img_item {
+.m_images img {
 	width: 100px;
 	height: 80px;
+}
+
+.m_img_item {
 	margin-bottom: 20px;
+	display: block;
 	background-color: #1b9669;
 }

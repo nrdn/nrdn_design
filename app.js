@@ -75,15 +75,10 @@ function checkAuth (req, res, next) {
 // ------------------------
 
 
-app.post('/works', function(req, res) {
-  Work.find().sort('-date').exec(function(err, works) {
-    res.send(works);
-  });
-});
-
-app.post('/posts', function(req, res) {
-  Post.find().sort('-date').exec(function(err, posts) {
-    res.send(posts);
+app.post('/work', function(req, res) {
+  var id = req.body.id;
+  Work.findById(id, function(err, work) {
+    res.send(work);
   });
 });
 

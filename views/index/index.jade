@@ -34,33 +34,30 @@ block content
 		.work.site
 			each work in works
 				if (work.category == 'site')
-					.work_item
+					.work_item(id=work._id)
 						!= work.logo
 		.work.support
 			each work in works
 				if (work.category == 'support')
-					.work_item
+					.work_item(id=work._id)
 						!= work.logo
 		.work.navigate
 			each work in works
 				if (work.category == 'navigate')
-					.work_item
+					.work_item(id=work._id)
 						!= work.logo
 		.work.design
 			each work in works
 				if (work.category == 'design')
-					.work_item
+					.work_item(id=work._id)
 						!= work.logo
 		.work.exhibition
 			each work in works
 				if (work.category == 'exhibition')
-					.work_item
+					.work_item(id=work._id)
 						!= work.logo
 	#work_area
-		.work_demo
-		.work_demo
-		.work_demo
-		.work_demo
+
 	#contacts
 		!= '+7 (495) 629-03-40 / '
 		a(href='mailto:mail@nrdn.ru') mail@nrdn.ru
