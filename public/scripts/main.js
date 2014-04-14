@@ -1,5 +1,4 @@
 $(document).ready(function() {
-	$('#work_area, .m_images').hide();
 
 	$('.work_item').click(function(event) {
 		$.post( '/work', { id: $(this).attr('id') } ).done(function(work) {
@@ -27,22 +26,18 @@ $(document).ready(function() {
 	});
 
 	var s = skrollr.init({
+		forceHeight: false,
 		constants: {
-			works: document.getElementById("works").clientHeight + 800
-		},
-		forceHeight: false
+			works: $('#works').height() + 800
+		}
 	});
 
 	skrollr.menu.init(s, {
-	    //skrollr will smoothly animate to the new position using `animateTo`.
-	    animate: true,
+		animate: true,
+		scale: 2,
 
-	    //Multiply your data-[offset] values so they match those set in skrollr.init
-	    scale: 2,
-
-	    //How long the animation should take in ms.
-	    duration: function(currentTop, targetTop) {
-	    	return 500;
-	    }
+		duration: function(currentTop, targetTop) {
+			return 500;
+		}
 	});
 });
