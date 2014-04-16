@@ -6,6 +6,7 @@ $(document).ready(function() {
 		$.post( '/work', { id: $(this).attr('id') } ).done(function(work) {
 			$(document).scrollTop(0);
 			$('.main_block').css('margin-bottom', '0px').css('margin', '0 auto');
+			$('.footer_block').css('height', '20%');
 			$('#works, #categorys, #contacts, #maps').hide();
 
 			$.each(work.images, function(index, image) {
@@ -25,7 +26,7 @@ $(document).ready(function() {
 			$('.m_images, #work_area').empty();
 		});
 		$('#works, #categorys, #contacts, #maps').show();
-		$('.main_block').removeAttr('style');
+		$('.main_block, .footer_block').removeAttr('style');
 	});
 
 	var s = skrollr.init({

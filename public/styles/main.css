@@ -8,13 +8,20 @@ body {
 }
 
 .maket {
-	background-color: white;
+	background-color: #b7b1d6;
 	overflow: hidden;
-	width: 100%;
+	width: 1280px;
 	position: relative;
 	margin: 0 auto;
-	margin-bottom: 26%;
+	margin-bottom: 350px;
 	z-index: 1;
+}
+
+.maket_outer {
+	width: 100%;
+	background: #fc0;
+	position: relative;
+	z-index: 100;
 }
 
 .main_block {
@@ -24,6 +31,7 @@ body {
 }
 
 .content_block {
+	min-width: 1280px;
 	position: relative;
 	background-color: #73b1d6;
 }

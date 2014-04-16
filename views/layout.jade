@@ -3,14 +3,15 @@ html
 	head
 		include header
 	body
-		.maket#scrollr-body
-			.main_block
-				.menu_block
-					a#m_categorys.logo(href='#scrollr-body') NRDN design
-					a#m_works.m_item(href='#works') работы
-					a#m_contacts.m_item(href='#contacts') контакты
-					.m_images
-				.content_block
-					block content
+		.maket_outer
+			.maket#scrollr-body
+				.main_block
+					.menu_block
+						a#m_categorys.logo(href='#scrollr-body') NRDN design
+						a#m_works.m_item(href='#works') работы
+						a#m_contacts.m_item(href='#contacts') контакты
+						.m_images
+					.content_block
+						block content
 		.footer_block
 			block footer
