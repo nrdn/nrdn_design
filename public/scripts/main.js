@@ -10,6 +10,13 @@ $(document).ready(function() {
 			$('.maket').css('margin-bottom', '200px');
 			$('#works, #categorys, #contacts, #maps').hide();
 
+
+			var work_description_block = $('<div/>', {'class': 'work_description_block'});
+			var title = $('<div/>', {'class': 'work_title', 'text': work.ru.title});
+			var description = $('<div/>', {'class': 'work_description', 'text': work.ru.description});
+			$('.footer_block').append(work_description_block.append(title, description));
+
+
 			$.each(work.images, function(index, image) {
 				var img_link = $('<a/>', {'class': 'm_img_item', 'href': '#' + arr[index]});
 				var img = $('<img/>', {'src': image});
@@ -25,6 +32,7 @@ $(document).ready(function() {
 	$('#m_works, #m_categorys, #m_contacts').click(function(event) {
 		$('#work_area, .m_images').fadeOut(500).promise().done(function() {
 			$('.m_images, #work_area').empty();
+			$('.work_description_block').remove();
 		});
 		$('#works, #categorys, #contacts, #maps').show();
 		$('.main_block, .footer_block, .maket').removeAttr('style');

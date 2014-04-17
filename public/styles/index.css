@@ -114,3 +114,16 @@
 .partner:hover {
 	background-position: 0px 0px;
 }
+
+.work_description_block {
+	padding-left: 20%;
+}
+
+.work_title {
+	font: 14pt/16pt 'HelveticaL';
+	font-weight: bold;
+}
+
+.work_description {
+	font: 12pt/14pt 'HelveticaL';
+}
