@@ -8,10 +8,10 @@
 .category {
 	width: 100px;
 	height: 100px;
-	/*background-color: #eba1a4;*/
 	float: left;
 	margin-right: 100px;
 	/*position: absolute;*/
+	/*background-color: #eba1a4;*/
 }
 
 .cat_desc {
@@ -40,8 +40,8 @@
 	min-height: 200px;
 	margin-left: 50px;
 	margin-right: 50px;
-	/*background-color: #967451;*/
 	float: left;
+	/*background-color: #967451;*/
 }
 
 .work_item {
@@ -64,23 +64,23 @@
 	font: 12pt/14pt 'HelveticaL';
 	width: 1080px;
 	position: absolute;
-	background-color: #6da1bf;
+	/*background-color: #6da1bf;*/
 }
 
 #work_area {
-	background-color: #818cd6;
 	margin-top: 100px;
 	width: 1080px;
 	display: none;
 	/*height: 30%;*/
 	/*position: absolute;*/
 	margin-left: 200px;
+	/*background-color: #818cd6;*/
 }
 
 #work_area img {
 	width: 100%;
 	display: block;
-	background-color: green;
+	/*background-color: green;*/
 	margin-bottom: 30px;
 }
 
