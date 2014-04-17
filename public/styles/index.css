@@ -87,7 +87,7 @@
 .footer_block {
 	height: 50%;
 	width: 100%;
-	background-color: #8ebf78;
+	background-color: black;
 	position: fixed;
 	z-index: 0;
 	bottom: 0%;
@@ -119,6 +119,7 @@
 	width: 1280px;
 	position: relative;
 	margin: 0 auto;
+	color: white;
 }
 
 .work_title {
@@ -128,6 +129,7 @@
 }
 
 .work_description {
+	margin-top: 10px;
 	font: 12pt/14pt 'HelveticaL';
 	padding-left: 200px;
 }
