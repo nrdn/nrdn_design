@@ -116,14 +116,18 @@
 }
 
 .work_description_block {
-	padding-left: 20%;
+	width: 1280px;
+	position: relative;
+	margin: 0 auto;
 }
 
 .work_title {
 	font: 14pt/16pt 'HelveticaL';
 	font-weight: bold;
+	padding-left: 200px;
 }
 
 .work_description {
 	font: 12pt/14pt 'HelveticaL';
+	padding-left: 200px;
 }
