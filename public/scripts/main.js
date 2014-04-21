@@ -42,7 +42,20 @@ $(document).ready(function() {
 		forceHeight: false,
 		constants: {
 			works: $('#works').height() + 800
-		}
+		},
+    render: function(data) {
+        if ($('.logo').offset().top >= $('#categorys').offset().top) {
+        	$('.m_item').removeAttr('style')
+        }
+        if ($('.logo').offset().top >= $('#works').offset().top) {
+        	$('.m_item').removeAttr('style')
+        	$('#m_works').css('color', 'black');
+        }
+       	if ($('.logo').offset().top >= $('#contacts').offset().top - 250) {
+        	$('.m_item').removeAttr('style');
+        	$('#m_contacts').css('color', 'black');
+        }
+    }
 	});
 
 	skrollr.menu.init(s, {
