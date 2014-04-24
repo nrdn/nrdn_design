@@ -18,12 +18,12 @@ $(document).ready(function() {
 
 
 			$.each(work.images, function(index, image) {
-				var img_link = $('<a/>', {'class': 'm_img_item', 'href': '#' + arr[index]});
-				var img = $('<img/>', {'src': image});
+				var img_link = $('<a/>', {'class': 'm_img_item', 'text':'●', 'href': '#' + arr[index]});
+				// var img = $('<img/>', {'src': image});
 				var demo = $('<img/>', {'src': image, id: arr[index]});
 
 				$('#work_area').append(demo);
-				$('.m_images').append(img_link.append(img));
+				$('.m_images').append(img_link);
 			});
 			$('#work_area, .m_images').fadeIn(500);
 		});

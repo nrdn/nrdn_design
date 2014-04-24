@@ -50,13 +50,17 @@ body {
 	display: block;
 	color: black;
 	text-decoration: none;
-	font: 14pt/16pt 'HelveticaL';
+	font: 12pt/16pt 'HelveticaL';
 	color: #c8c8c8;
 }
 
 .m_item:before {
 	content: '●';
+	font-size: 28pt;
 	margin-right: 10px;
+	display: block;
+	float: left;
+	clear: both;
 }
 
 .logo {
@@ -69,15 +73,18 @@ body {
 
 .m_images {
 	margin-top: 15px;
+	margin-left: 2px;
 }
 
-.m_images img {
+/*.m_images img {
 	width: 100px;
 	height: 80px;
 }
-
+*/
 .m_img_item {
-	margin-bottom: 20px;
+	/*margin-bottom: 20px;*/
 	display: block;
-	/*background-color: #1b9669;*/
+	text-decoration: none;
+	color: black;
+	font: 18pt/16pt 'HelveticaL';
 }
