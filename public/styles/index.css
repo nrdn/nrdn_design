@@ -51,6 +51,11 @@
 	margin-bottom: 50px;
 }
 
+.work_item svg {
+	width: 100px;
+	height: 100px;
+}
+
 .work:last-child {
 	margin-right: 0;
 }
