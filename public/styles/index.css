@@ -86,6 +86,10 @@
 	width: 100%;
 	display: block;
 	/*background-color: green;*/
+	/*margin-bottom: 30px;*/
+}
+
+#work_area img:last-child {
 	margin-bottom: 30px;
 }
 
