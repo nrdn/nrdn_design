@@ -56,7 +56,7 @@ body {
 
 .m_item:before {
 	content: '●';
-	font-size: 28pt;
+	font-size: 22pt;
 	margin-right: 10px;
 	display: block;
 	float: left;
@@ -86,5 +86,5 @@ body {
 	display: block;
 	text-decoration: none;
 	color: black;
-	font: 18pt/16pt 'HelveticaL';
+	font: 12pt/16pt 'HelveticaL';
 }

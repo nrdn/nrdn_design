@@ -1,7 +1,33 @@
 $(document).ready(function() {
 
+	function scrollMain(data) {
+	  if ($('.logo').offset().top >= $('#categorys').offset().top) {
+	  	$('.m_item').removeAttr('style')
+	  }
+	  if ($('.logo').offset().top >= $('#works').offset().top) {
+	  	$('.m_item').removeAttr('style')
+	  	$('#m_works').css('color', 'black');
+	  }
+	 	if ($('.logo').offset().top >= $('#contacts').offset().top - 250) {
+	  	$('.m_item').removeAttr('style');
+	  	$('#m_contacts').css('color', 'black');
+	  }
+	}
+
+	function scrollImg (data) {
+	  if ($('.logo').offset().top >= $('.img_demo').offset().top - 250) {
+	  	console.log($('.img_demo').attr('id'))
+	  	$('.m_item').removeAttr('style')
+	  	$('#m_works').css('color', 'black');
+	  }
+	}
+
 	$('.work_item').click(function(event) {
-		var arr = ['one', 'two', 'three', 'four', 'five', 'six', 'seven'];
+		var arr = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];
+		s.on('render', scrollImg)
+
+    $('.m_item').removeAttr('style')
+		$('#m_works').css('color', 'black');
 
 		$.post( '/work', { id: $(this).attr('id') } ).done(function(work) {
 			$(document).scrollTop(0);
@@ -19,8 +45,7 @@ $(document).ready(function() {
 
 			$.each(work.images, function(index, image) {
 				var img_link = $('<a/>', {'class': 'm_img_item', 'text':'●', 'href': '#' + arr[index]});
-				// var img = $('<img/>', {'src': image});
-				var demo = $('<img/>', {'src': image, id: arr[index]});
+				var demo = $('<img/>', {'src': image, 'class':'img_demo', 'id': arr[index]});
 
 				$('#work_area').append(demo);
 				$('.m_images').append(img_link);
@@ -30,6 +55,8 @@ $(document).ready(function() {
 	});
 
 	$('#m_works, #m_categorys, #m_contacts').click(function(event) {
+		s.on('render', scrollMain);
+
 		$('#work_area, .m_images').fadeOut(500).promise().done(function() {
 			$('.m_images, #work_area').empty();
 			$('.work_description_block').remove();
@@ -43,19 +70,7 @@ $(document).ready(function() {
 		constants: {
 			works: $('#works').height() + 800
 		},
-    render: function(data) {
-        if ($('.logo').offset().top >= $('#categorys').offset().top) {
-        	$('.m_item').removeAttr('style')
-        }
-        if ($('.logo').offset().top >= $('#works').offset().top) {
-        	$('.m_item').removeAttr('style')
-        	$('#m_works').css('color', 'black');
-        }
-       	if ($('.logo').offset().top >= $('#contacts').offset().top - 250) {
-        	$('.m_item').removeAttr('style');
-        	$('#m_contacts').css('color', 'black');
-        }
-    }
+    render: scrollMain
 	});
 
 	skrollr.menu.init(s, {
