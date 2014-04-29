@@ -14,6 +14,8 @@ block content_scripts
 	script(type='text/javascript', src='/scripts/main.js' + version)
 
 block content
+	#arrow_down(data-smooth-scrolling='off', data-anchor-target='#works', data-0='opacity: 1;', data-bottom-top='opacity: 0;')
+		img.arrow_inner(src='/images/design/arrow.png')
 	#categorys(data-smooth-scrolling='off', data-anchor-target='#works', data-0='margin-top: 0px;', data-800='margin-top: -200px;', data-_works='margin-top: -200px;', data-top-bottom='margin-top: -350px;')
 		a.category(href='#works')
 			img(src='/images/design/services/site.svg', data-anchor-target='#works', data-0='width: 100px;', data-800='width: 50px;')
