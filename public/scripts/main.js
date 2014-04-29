@@ -16,9 +16,10 @@ $(document).ready(function() {
 
 	function scrollImg (data) {
 	  if ($('.logo').offset().top >= $('.img_demo').offset().top - 250) {
-	  	console.log($('.img_demo').attr('id'))
-	  	$('.m_item').removeAttr('style')
-	  	$('#m_works').css('color', 'black');
+	  	var id = $('.img_demo').attr('id');
+	  	console.log(id)
+	  	$('.m_img_item').removeAttr('style')
+	  	$('#' + id).css('color', 'red');
 	  }
 	}
 
