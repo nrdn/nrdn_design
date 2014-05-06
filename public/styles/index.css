@@ -6,10 +6,20 @@
 	bottom: 10%;
 }
 
+.arrow_outer {
+	width: 120px;
+	height: 30px;
+	margin: 0 auto;
+	padding-top: 10px;
+	position: relative;
+	background-color: rgba(255, 255, 255, 0.67);
+}
+
 .arrow_inner {
 	width: 50px;
 	height: 25px;
-	margin-left: 540px;
+	margin: 0 auto;
+	position: relative;
 	display: block;
 	/*background-color: #26a46e;*/
 }
